@@ -1,5 +1,5 @@
-Date: 4/8/2020
 ADD Iteration: 1
+Date: 4/8/2020
 Step 1: Review Inputs
 Lets begin by reviewing the inputs of our system and defining which requirements we will consider as drivers.
 Design Purpose- The purpose of this design is to explore different prototypes to address the CM2W's desire to spread their IoT capabilities into the coffee industry.
@@ -38,6 +38,7 @@ Concerns
 	Legal/data privacy issues
 		1. Orders for more supplies need to be kept private so people don't raid the office supply when a new order comes in.
 		2. Shouldn't be able to predict how much coffee is used just by looking for network traffic from the coffee machine. 
+		
 Step 2: Establish Iteration Goal by Selecting Drivers
 For the first step of ADD step 2, we need to consider the drivers for our system.
 To identify our drivers, we need to analyze our quality attribute scenarios, conerns, roles, legal issues and constraints. Doing this will help us understand
@@ -56,3 +57,16 @@ Security
 	Concerns - Roles 5
 	Concerns - Legal/data privacy issues 1
 	Concerns - Legal/data privacy issues 2
+	
+Step 3: Choose One or More Elements of the System to refine
+Since this is greenfield development, we will be refining the entire CM2W coffee system
+
+Step 4: Choose One or More Design Concepts That Satisfy the Selected Drivers
+Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
+several reference architectures and deployements to satisfy our drivers.
+Design Decision: Logically structure our system using the Mobile Application Architecture
+Rationale: The 5th technological concern mentions that our system "Needs on-premise Android 3.0 apps...., plus iOS 7 + Android 3.0 app for checking stocks
+of all client's machines." That reason alone should be convincing enough for us to strongly consider the mobile application architecture, but there are
+other drivers that we should consider as well. For instance, 
+Image:
+External Research
