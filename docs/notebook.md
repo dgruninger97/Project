@@ -64,9 +64,12 @@ Since this is greenfield development, we will be refining the entire CM2W coffee
 Step 4: Choose One or More Design Concepts That Satisfy the Selected Drivers
 Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
 several reference architectures and deployements to satisfy our drivers.
-Design Decision: Logically structure our system using the Mobile Application Architecture
+Design Decision: Logically structure our user based system using the Mobile Application Architecture
 Rationale: The 5th technological concern mentions that our system "Needs on-premise Android 3.0 apps...., plus iOS 7 + Android 3.0 app for checking stocks
 of all client's machines." That reason alone should be convincing enough for us to strongly consider the mobile application architecture, but there are
-other drivers that we should consider as well. For instance, 
+other drivers that we should consider as well. For instance, if the user wants to be able to check how much coffee they have left remotely, then we don't want
+them to have to carry around their laptop all day with them. What if they work at a job where you aren't close to your laptop? Therefore, a mobile application
+would be helpful in the sense that it will allow clients to remotely make coffee or check how much coffee is left (QAS1 + QAS2).
+Additionally, according to external research, mobile applications make it very easy to use REST APIs rather than HTTPS (Technical concerns - 3).
 Image:
-External Research
+External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-app
