@@ -119,4 +119,15 @@ External Research: N/A
 ## Step 6: Sketch Views and Record Design Decisions
 
 Deployement Pattern view of the system:
-![Design 1](images/ModView.png)
+
+![Mod View](images/ModView.png)
+
+Responsibilities:
+
+	1. CoffeeMachineTrackerUI - This will be the main UI of our system, and will display relavent data to the resepctive user of the application
+	2. CM2WSecurityLayer - This hides all network traffic so as to protect user data privacy. Additionally, this will keep supply order information
+	private so that people don't take all of the arriving supplies; per Legal/Privacy conerns 1 & 2
+	3. CM2WBusinessApplication - This is going to be where the business logic of CM2W's coffee system will reside.
+	4. SQLDBAccess - SQLDBAccess will grant our system access to a SQLDatabase; per Technology Conern 4
+	5. NoSQLDBAccess - NoSQLDBAccess will grant our system access to a NoSQLDatabase; per Technology Conern 4
+	
