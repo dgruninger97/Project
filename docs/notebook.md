@@ -133,7 +133,7 @@ Responsibilities:
 	
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
-| Addressed | Not Addressed  | Decisions Made during Iteration |
+| Addressed or Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---         |     :---:      |          ---: |
 |  UC1  |      |  Selected two reference architectures that suppors this functionality   |
 |  UC2   |       |   Selected two reference architectures that suppors this functionality    |
