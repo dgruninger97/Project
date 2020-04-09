@@ -135,5 +135,7 @@ Responsibilities:
 
 | Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---         |     :---:      |          ---: |
-|  UC2  |      |  Blah blah blah   |
-|      |       |       |
+|  UC1  |      |  Selected two reference architectures that suppors this functionality   |
+|  UC2   |       |   Selected two reference architectures that suppors this functionality    |
+|  UC3   |       |   Selected two reference architectures that suppors this functionality    |
+|  UC4    |       |   I haven't yet though about how the supplier to going to function in the business logic of the system, however I already put a security layer in my module view to prevent supplies from being raided as soon as they arrive    |
