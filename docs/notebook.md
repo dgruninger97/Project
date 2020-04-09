@@ -63,6 +63,8 @@ By referring to the M1 Initial Drivers Document, we can identify the following d
 	3. Concerns - Roles 5
 	4. Concerns - Legal/data privacy issues 1
 	5. Concerns - Legal/data privacy issues 2
+### Modifiability
+	5. Concerns - Technology Concerns 4
 	
 ## Step 3: Choose One or More Elements of the System to refine
 
@@ -73,7 +75,7 @@ Since this is greenfield development, we will be refining the entire CM2W coffee
 Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
 a couple reference architectures and deployements to satisfy our drivers.
 
-Design Decision: Logically structure our user based system using the Mobile Application Architecture
+### Design Decision: Logically structure our user based system using the Mobile Application Architecture
 
 Rationale: The 5th technological concern mentions that our system "Needs on-premise Android 3.0 apps...., plus iOS 7 + Android 3.0 app for checking stocks
 of all client's machines." That reason alone should be convincing enough for us to strongly consider the mobile application architecture, but there are
@@ -86,7 +88,7 @@ using a mobile application will help addresses the ability for the client to aut
 External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-app
 
 
-Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
+### Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
 
 Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like giving the client the ability to check
 how much coffee is left remotely (UC2), allowing the client to order more coffee supplies (UC3), and automatically mapping new devices to the client's account
@@ -98,6 +100,18 @@ External Research:https://www.manufacturing.net/home/article/13055754/5-benefits
 
 ## Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
 
-### Design decision and Location:
+### Design Decision and Location: Add SQL and noSQL databases for the Mobile Application Architecture and the Rich Internet Application Architecture
 
-Rationale:
+Rationale: In order for our mobile application to be highly scalable and address our Modifiability driver for this iteration, we need to use SQL and noSQL
+database platforms for our data source in the Mobile Application Reference Architecture and Rich Internet Application Architecture.
+
+External Research: N/A
+
+### Design Decision and Location: Add security layers to the Mobile and Rich Internet Application Architecture's that hide network traffic and office supplies
+
+Rationale: This decision comes from our two concerns regarding privacy and legal concerns (Concerns - Legal/data privacy issues 1 and Concerns - Legal/data privacy issues 2)
+Adding these security layers to our architecture will allow us to address these concerns; and now clients wont have the ability to immediately buy up all the
+coffee ingrediants once they are shipped in. Additionally, users have their privacy ensured as their network traffic will not be monitored from a specific
+coffee machine.
+
+External Research: N/A
