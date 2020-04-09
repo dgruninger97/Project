@@ -73,7 +73,8 @@ Since this is greenfield development, we will be refining the entire CM2W coffee
 Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
 a couple reference architectures and deployements to satisfy our drivers.
 
-Design Decision: Logically structure our user based system using the Mobile Application Architecture
+### Design Decision: Logically structure our user based system using the Mobile Application Architecture
+
 Rationale: The 5th technological concern mentions that our system "Needs on-premise Android 3.0 apps...., plus iOS 7 + Android 3.0 app for checking stocks
 of all client's machines." That reason alone should be convincing enough for us to strongly consider the mobile application architecture, but there are
 other drivers that we should consider as well. For instance, if the user wants to be able to check how much coffee they have left remotely, then we don't want
@@ -81,15 +82,22 @@ them to have to carry around their laptop all day with them. What if they work a
 would be helpful in the sense that it will allow clients to remotely make coffee or check how much coffee is left (QAS1 + QAS2).
 Additionally, according to external research, mobile applications make it very easy to use REST APIs rather than HTTPS (Technical concerns - 3). Finally,
 using a mobile application will help addresses the ability for the client to authorize CM2W Admins to access their data over an APP (Concerns - Roles 5).
+
 External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-app
 
 
-Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
+### Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
+
 Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like giving the client the ability to check
 how much coffee is left remotely (UC2), allowing the client to order more coffee supplies (UC3), and automatically mapping new devices to the client's account
-when it comes online within two minutes (QAS3).
-External Research:
+when it comes online within two minutes (QAS3). Also after doing some research, I realized that rich internet applications are especially helpful for mobile access,
+integration among many system, and effective data visualition. These are absolutely critical for the CM2W coffee system, and which is why I am also considering
+it as another reference architecture.
 
-Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
-Design decision and Location:
+External Research:https://www.manufacturing.net/home/article/13055754/5-benefits-of-rich-internet-applications-for-manufacturing-roi
+
+## Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
+
+### Design decision and Location:
+
 Rationale:
