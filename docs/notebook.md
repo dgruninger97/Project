@@ -73,7 +73,7 @@ Since this is greenfield development, we will be refining the entire CM2W coffee
 Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
 a couple reference architectures and deployements to satisfy our drivers.
 
-### Design Decision: Logically structure our user based system using the Mobile Application Architecture
+Design Decision: Logically structure our user based system using the Mobile Application Architecture
 
 Rationale: The 5th technological concern mentions that our system "Needs on-premise Android 3.0 apps...., plus iOS 7 + Android 3.0 app for checking stocks
 of all client's machines." That reason alone should be convincing enough for us to strongly consider the mobile application architecture, but there are
@@ -86,7 +86,7 @@ using a mobile application will help addresses the ability for the client to aut
 External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-app
 
 
-### Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
+Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
 
 Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like giving the client the ability to check
 how much coffee is left remotely (UC2), allowing the client to order more coffee supplies (UC3), and automatically mapping new devices to the client's account
