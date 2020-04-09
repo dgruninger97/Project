@@ -96,7 +96,7 @@ when it comes online within two minutes (QAS3). Also after doing some research, 
 integration among many system, and effective data visualition. These are absolutely critical for the CM2W coffee system, and which is why I am also considering
 it as another reference architecture.
 
-External Research:https://www.manufacturing.net/home/article/13055754/5-benefits-of-rich-internet-applications-for-manufacturing-roi
+External Research: https://www.manufacturing.net/home/article/13055754/5-benefits-of-rich-internet-applications-for-manufacturing-roi
 
 ## Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
 
@@ -115,3 +115,8 @@ coffee ingrediants once they are shipped in. Additionally, users have their priv
 coffee machine.
 
 External Research: N/A
+
+## Step 6: Sketch Views and Record Design Decisions
+
+Deployement Pattern view of the system:
+![Design 1](images/ModView.png)
