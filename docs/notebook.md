@@ -1,4 +1,4 @@
-ADD Iteration: 1
+#ADD Iteration: 1
 Date: 4/8/2020
 Step 1: Review Inputs
 Lets begin by reviewing the inputs of our system and defining which requirements we will consider as drivers.
@@ -48,11 +48,11 @@ Performance
 	QAS1
 	QAS2
 	QAS3
+	Concerns - Technology Conern 3
 Availability
 	QAS4
 Security
 	QAS5
-	Concerns - Roles 2
 	Concerns - Roles 6
 	Concerns - Roles 5
 	Concerns - Legal/data privacy issues 1
@@ -63,13 +63,23 @@ Since this is greenfield development, we will be refining the entire CM2W coffee
 
 Step 4: Choose One or More Design Concepts That Satisfy the Selected Drivers
 Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
-several reference architectures and deployements to satisfy our drivers.
+a couple reference architectures and deployements to satisfy our drivers.
+
 Design Decision: Logically structure our user based system using the Mobile Application Architecture
 Rationale: The 5th technological concern mentions that our system "Needs on-premise Android 3.0 apps...., plus iOS 7 + Android 3.0 app for checking stocks
 of all client's machines." That reason alone should be convincing enough for us to strongly consider the mobile application architecture, but there are
 other drivers that we should consider as well. For instance, if the user wants to be able to check how much coffee they have left remotely, then we don't want
 them to have to carry around their laptop all day with them. What if they work at a job where you aren't close to your laptop? Therefore, a mobile application
 would be helpful in the sense that it will allow clients to remotely make coffee or check how much coffee is left (QAS1 + QAS2).
-Additionally, according to external research, mobile applications make it very easy to use REST APIs rather than HTTPS (Technical concerns - 3).
-Image:
+Additionally, according to external research, mobile applications make it very easy to use REST APIs rather than HTTPS (Technical concerns - 3). Finally,
+using a mobile application will help addresses the ability for the client to authorize CM2W Admins to access their data over an APP (Concerns - Roles 5).
 External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-app
+
+
+Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
+Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like
+External Research:
+
+Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
+Design decision and Location:
+Rationale:
