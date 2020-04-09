@@ -1,28 +1,31 @@
 # ADD Iteration: 1
 
 Date: 4/8/2020
-Step 1: Review Inputs
+
+## Step 1: Review Inputs
+
 Lets begin by reviewing the inputs of our system and defining which requirements we will consider as drivers.
 Design Purpose- The purpose of this design is to explore different prototypes to address the CM2W's desire to spread their IoT capabilities into the coffee industry.
 Side Note: For ADD step 1, we can pretty much get all of our information straight from the M1 Initial Drivers Document
-Primary Functional Requirements
+
+### Primary Functional Requirements
 	UC1: User makes coffee on a small/medium/large machine
 	UC2: Client checks how much coffee is left remotely
 	UC3: Client orders more coffee supplies for multiple machines
 	UC4: Supplier predicts when next coffee order will be needed
 	UC5: Client describes business rules locking/unlocking users’ access to coffee machine
-Quality Attribute Scenarios
+### Quality Attribute Scenarios
 	QAS1: When a supplier upgrades a single-capsule coffee machine using the Simple Coffee Controller, the upgrade should take no more than 10 minutes.
 	QAS2: When a supplier upgrades a commercial coffee machine using the Advanced Coffee Controller, the upgrade should take no more than two hours.
 	QAS3: When a new device comes online, CM2W will automatically map it to the client’s account within two minutes.
 	QAS4: If cell service goes down, then the controller software should log uses offline until cell services comes back up, then sync the updates all at once without information loss and without interrupting the coffee machine.
 	QAS5: When a user dispenses coffee from a coffee machine during the morning rush, the coffee machine should push updates without any information loss and without interrupting the coffee machine itself.
-Constraints
+### Constraints
 	1. Controller software must be written in C.
 	2. Simple Coffee Controller hardware cannot dispense coffee, but can do everything else the Advanced Coffee Controller can.
 	3. Can't poll coffee machines for status. Need to wait for them to push status.
 	4. All APIs must have no application state.
-Concerns
+### Concerns
 	Technology Concerns
 		1. Two Point of Sale controllers being worked on: Simple Coffee Controller and Advanced Coffee Controller. Software needs to support both.
 		2. Controllers connect to Internet over HSPDA. 
@@ -40,29 +43,33 @@ Concerns
 		1. Orders for more supplies need to be kept private so people don't raid the office supply when a new order comes in.
 		2. Shouldn't be able to predict how much coffee is used just by looking for network traffic from the coffee machine. 
 		
-Step 2: Establish Iteration Goal by Selecting Drivers
+## Step 2: Establish Iteration Goal by Selecting Drivers
+
 For the first step of ADD step 2, we need to consider the drivers for our system.
 To identify our drivers, we need to analyze our quality attribute scenarios, conerns, roles, legal issues and constraints. Doing this will help us understand
 the drivers of our system.
 By referring to the M1 Initial Drivers Document, we can identify the following drivers:
-Performance
-	QAS1
-	QAS2
-	QAS3
-	Concerns - Technology Conern 3
-Availability
-	QAS4
-Security
-	QAS5
-	Concerns - Roles 6
-	Concerns - Roles 5
-	Concerns - Legal/data privacy issues 1
-	Concerns - Legal/data privacy issues 2
+
+### Performance
+	1. QAS1
+	2. QAS2
+	3. QAS3
+	4. Concerns - Technology Conern 3
+### Availability
+	1. QAS4
+### Security
+	1. QAS5
+	2. Concerns - Roles 6
+	3. Concerns - Roles 5
+	4. Concerns - Legal/data privacy issues 1
+	5. Concerns - Legal/data privacy issues 2
 	
-Step 3: Choose One or More Elements of the System to refine
+## Step 3: Choose One or More Elements of the System to refine
+
 Since this is greenfield development, we will be refining the entire CM2W coffee system
 
-Step 4: Choose One or More Design Concepts That Satisfy the Selected Drivers
+## Step 4: Choose One or More Design Concepts That Satisfy the Selected Drivers
+
 Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
 a couple reference architectures and deployements to satisfy our drivers.
 
@@ -78,7 +85,9 @@ External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-ap
 
 
 Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
-Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like
+Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like giving the client the ability to check
+how much coffee is left remotely (UC2), allowing the client to order more coffee supplies (UC3), and automatically mapping new devices to the client's account
+when it comes online within two minutes (QAS3).
 External Research:
 
 Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
