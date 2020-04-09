@@ -131,3 +131,9 @@ Responsibilities:
 	4. SQLDBAccess - SQLDBAccess will grant our system access to a SQLDatabase; per Technology Conern 4
 	5. NoSQLDBAccess - NoSQLDBAccess will grant our system access to a NoSQLDatabase; per Technology Conern 4
 	
+## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
+
+| Addressed | Not Addressed  | Decisions Made during Iteration |
+| :---         |     :---:      |          ---: |
+|  UC2  |      |  Blah blah blah   |
+|      |       |       |
