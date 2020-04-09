@@ -139,3 +139,9 @@ Responsibilities:
 |  UC2   |       |   Selected two reference architectures that suppors this functionality    |
 |  UC3   |       |   Selected two reference architectures that suppors this functionality    |
 |  UC4    |       |   I haven't yet though about how the supplier to going to function in the business logic of the system, however I already put a security layer in my module view to prevent supplies from being raided as soon as they arrive    |
+|       |   UC5    |   This will need to be incorporated in the business logic of the reference architecture I have provided, but it hasn't been explicitly provided yet    |
+|  QAS1   |       |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
+|  QAS2   |       |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
+|  QAS3   |       |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
+|  QAS4   |       |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
+|  QAS5   |       |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
