@@ -118,7 +118,7 @@ External Research: N/A
 
 ## Step 6: Sketch Views and Record Design Decisions
 
-Deployement Pattern view of the system (Module View):
+Initial Domain Moduel view of the system (Domain Model):
 
 ![Mod View](images/ModView.png)
 
@@ -135,6 +135,7 @@ Responsibilities:
 	8. AdvancedCoffeeController - Logic for the client's ability to use and modify the AdvancedCoffeeController system
 	9. SimpleCoffeeController - Logic for the client's ability to use and modify the SimpleCoffeeController system
 	10. CM2WNewDeviceIntegration - Logic for adding new devices to the CM2WManagementPlatform
+	11. Machine -- represents a coffee machine in our system
 	
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
@@ -212,11 +213,18 @@ View, we can instantiate our architectures.
 By adding specified user objects to our system, it will make our system much easier to handle different permissions and allow users to have functionality
 that is different based on what the user is actually supposed to do. One benefit to this approach is that we already have our user PermissionsLayer specified,
 now all we need to do is add our users. Additionally, since we are converting into a domain model, this will allow us to add some methods that are critical
-for our system to function as needed.
+for our system to function as needed. This will include some of the functions that we mentioned we needed to add in our first ADD iteration.
 
 ## Step 5: Instantitate Architetural Elements, Allocate Responsibilities, and Define Interfaces
 
 | Design Decision & Location| Rationale |
 | :---:                     |          :---: |
-| Create initial domain model with methods | This will allow us to specifictly identify and address the issues presented to us in our drivers for this iteration |
-| Introduce two models - one for Android and iOS | Having two models that represent Android and iOS platforms allows us to also finish addressing Technical Concern 5, which was only partially addressed last iteration |
+| Create initial domain model with user objects | This will allow us to specifictly identify and address the issues presented to us, with regards to Role Concerns, in our drivers for this iteration |
+| Introduce two new objects in the presentation layer - one for Android and iOS | Having two models that represent Android and iOS platforms allows us to also finish addressing Technical Concern 5, which was only partially addressed last iteration |
+| Add methods to from ADD iteration 1 | Adding methods allows us to more clearly define what the main business logic of our system will be doing |
+
+## Step 6: Sketch Views and Record Design Decisions
+
+Domain Model: 
+
+![Mod View](images/DomainModel.png)
