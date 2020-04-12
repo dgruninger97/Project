@@ -124,24 +124,30 @@ Deployement Pattern view of the system:
 
 Responsibilities:
 
-	1. CoffeeMachineTrackerUI - This will be the main UI of our system, and will display relavent data to the resepctive user of the application
+	1. PointOfSalesMobileApp - This will be the main UI of our system, and will display relavent data to the resepctive user of the application
 	2. CM2WSecurityLayer - This hides all network traffic so as to protect user data privacy. Additionally, this will keep supply order information
 	private so that people don't take all of the arriving supplies; per Legal/Privacy conerns 1 & 2
-	3. CM2WBusinessApplication - This is going to be where the business logic of CM2W's coffee system will reside.
+	3. CM2WManagementPlatform - This is going to be where the business logic of CM2W's coffee system will reside.
 	4. SQLDBAccess - SQLDBAccess will grant our system access to a SQLDatabase; per Technology Conern 4
 	5. NoSQLDBAccess - NoSQLDBAccess will grant our system access to a NoSQLDatabase; per Technology Conern 4
+	6. UpgradeTimer - This will time the upgrades of our system and notify our CM2WManagementPlatform if an upgrade takes too long
 	
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
-|  UC1     |                     |                |  Selected two reference architectures that suppors this functionality   |
-|  UC2     |                     |                |   Selected two reference architectures that suppors this functionality    |
-|  UC3     |                     |                |   Selected two reference architectures that suppors this functionality    |
-|  UC4     |                     |                |   I haven't yet though about how the supplier to going to function in the business logic of the system, however I already put a security layer in my module view to prevent supplies from being raided as soon as they arrive    |
+|  UC1     |                     |                |  Using the CM2W Management platform allows users to order their different sizes of coffee from different machines   |
+|  UC2     |                     |                |   The mobile application reference architecture along with the rich internet application both allow the client to remotely check how much coffee is left    |
+|  UC3     |                     |                |   The CM2W Management platform will allows clients to make orders for their different machines    |
+|       |          UC4           |                |   I haven't yet though about how the supplier to going to function in the business logic of the system, however I already put a security layer in my module view to prevent supplies from being raided as soon as they arrive    |
 |          |                     |         UC5    |   This will need to be incorporated in the business logic of the reference architecture I have provided, but it hasn't been explicitly provided yet    |
-|  QAS1    |                     |                |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
-|  QAS2    |                     |                |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
-|  QAS3    |                     |                |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
-|  QAS4    |                     |                |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
-|  QAS5    |                     |                |   Selected two reference architectures along with supporting research to verify that a feature like this could be incorporated in the system    |
+|  QAS1    |                     |                |   Added a timer into the module view of our system; this will make sure that upgrades using the Simple Coffee Controller are done within the 10 minute timeframe    |
+|  QAS2    |                     |                |   Again, will be using the timer mentioned for QAS2 to make sure that the upgrade, this time using the Advanced Coffee Controller, will take less than 2 hours    |
+|  QAS3    |                     |                |   We have logic specified our in the module view of our system so that new device logic is handled properly. We will use the timer again to ensure we meet our time constraint.    |
+|  Tech-Concern 4    |                     |                |   Added SQL and NoSQL database access to the data source of the module view    |
+|   Legal-Concern 1   |                     |                |   CM2WSecurityLayer will ensure that our system's order are hidden so that clients don't hoard orders up front    |
+|   Legal-Concern 2   |                     |                |   Our system has both the SimpleCoffeeController and AdvancedCoffeeController tied to our security layer, which will prevent network traffic data from being broadcast or used to predict which station is most popular    |
+|      |                     |         Constraint 1       |   Not yet addressed    |
+|      |                     |         Constraint 2       |   Not yet addressed    |
+|      |                     |         Constraint 3       |   Not yet addressed    |
+|      |                     |         Constraint 4       |   Not yet addressed    |
