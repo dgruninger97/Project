@@ -118,7 +118,7 @@ External Research: N/A
 
 ## Step 6: Sketch Views and Record Design Decisions
 
-Initial Domain Moduel view of the system (Domain Model):
+Initial Module view of the system (Domain Model):
 
 ![Mod View](images/InitialDomainModel.png)
 
@@ -235,3 +235,5 @@ These methods are very abstract and open for change. I am really just trying to 
 using these either of my reference architectures, it is simply there to get a general idea of where the functionality of the system will be distributed
 and what classes will be responsible for what actions.
 
+| Element | Responsibility |
+| :---:  |          :---: |
