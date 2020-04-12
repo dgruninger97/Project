@@ -222,7 +222,7 @@ for our system to function as needed. This will include some of the functions th
 
 ## Step 6: Sketch Views and Record Design Decisions
 
-Domain Model: 
+Domain Model with useful methods: 
 
 ![Mod View](images/DomainModelMethods.png)
 
@@ -249,8 +249,15 @@ through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() 
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
-|  Roles-Concern 2        |                     |                |    In order for the clients to be able to set the business rules for controlling access, I've put in a function in the PermissionsLayer called setBusinessRules()                             |
-|  Roles-Concern 3        |                     |                |    Similarly, I put a function in the CM2WManagementPlatform called requestMoveInventory()                              |
-|  Roles-Concern 4        |                     |                |    There is now seeStocks() in the CM2WManagementPlatform                             |
-|  Roles-Concern 5        |                     |                |    I added a function called askToMakeCoffee() in the CM2WManagementPlatform, which applies to users                  |
-|  Roles-Concern 6        |                     |                |    There is another function called authorizeAdminsAccess(), but I put this one in PermissionsAccess instead of CM2WManagementPlatform                              |
+|  Roles Concern 2        |                     |                |    In order for the clients to be able to set the business rules for controlling access, I've put in a function in the PermissionsLayer called setBusinessRules()                             |
+|  Roles Concern 3        |                     |                |    Similarly, I put a function in the CM2WManagementPlatform called requestMoveInventory()                              |
+|  Roles Concern 4        |                     |                |    There is now seeStocks() in the CM2WManagementPlatform                             |
+|  Roles Concern 5        |                     |                |    I added a function called askToMakeCoffee() in the CM2WManagementPlatform, which applies to users                  |
+|  Roles Concern 6        |                     |                |    There is another function called authorizeAdminsAccess(), but I put this one in PermissionsAccess instead of CM2WManagementPlatform                              |
+|  Technical Concern 5        |                     |                |    Added Android and iOS annotations for both the domain layer and the presentation layer to handle both the Model and the Controller differences between Android and iOS apps                              |
+|          |                     |        Constraint 1        |           Not addressed                       |
+|          |                     |        Constraint 2        |           Not addressed                       |
+|          |                     |        Constraint 3        |           Not addressed                       |
+|          |                     |        Constraint 4        |           Not addressed                       |
+
+# ADD Iteration: 3
