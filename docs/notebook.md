@@ -244,12 +244,13 @@ and what classes will be responsible for what actions.
 #### Important Side Note: 
 
 I defined all of the user classes (USER, CLIENT, SUPPLIER) in the actual class diagram. So when it comes to having users defined, that is what I did. That way I would not have
-to list it in literally every table entry below.
+to list it in literally every table entry below. This means that users can access user-related functions through the PermissionsLayer's setDefinedUser() function, clients can access client-related functions
+through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() will set the user and grant them functions mentioned in CM2WManagementPlatform.
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
-|  Roles-Concern 2        |                     |                |                                 |
-|  Roles-Concern 3        |                     |                |                                 |
-|  Roles-Concern 4        |                     |                |                                 |
+|  Roles-Concern 2        |                     |                |    In order for the clients to be able to set the business rules for controlling access, I've put in a function in the PermissionsLayer called setBusinessRules()                             |
+|  Roles-Concern 3        |                     |                |    Similarly, I put a function in the CM2WManagementPlatform called requestMoveInventory()                              |
+|  Roles-Concern 4        |                     |                |    There is now seeStocks() in the CM2WManagementPlatform                             |
 |  Roles-Concern 5        |                     |                |                                 |
 |  Roles-Concern 6        |                     |                |                                 |
