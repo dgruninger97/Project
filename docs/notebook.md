@@ -252,5 +252,5 @@ through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() 
 |  Roles-Concern 2        |                     |                |    In order for the clients to be able to set the business rules for controlling access, I've put in a function in the PermissionsLayer called setBusinessRules()                             |
 |  Roles-Concern 3        |                     |                |    Similarly, I put a function in the CM2WManagementPlatform called requestMoveInventory()                              |
 |  Roles-Concern 4        |                     |                |    There is now seeStocks() in the CM2WManagementPlatform                             |
-|  Roles-Concern 5        |                     |                |                                 |
-|  Roles-Concern 6        |                     |                |                                 |
+|  Roles-Concern 5        |                     |                |    I added a function called askToMakeCoffee() in the CM2WManagementPlatform, which applies to users                  |
+|  Roles-Concern 6        |                     |                |    There is another function called authorizeAdminsAccess(), but I put this one in PermissionsAccess instead of CM2WManagementPlatform                              |
