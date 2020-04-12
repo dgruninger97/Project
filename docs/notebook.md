@@ -131,6 +131,10 @@ Responsibilities:
 	4. SQLDBAccess - SQLDBAccess will grant our system access to a SQLDatabase; per Technology Conern 4
 	5. NoSQLDBAccess - NoSQLDBAccess will grant our system access to a NoSQLDatabase; per Technology Conern 4
 	6. UpgradeTimer - This will time the upgrades of our system and notify our CM2WManagementPlatform if an upgrade takes too long
+	7. PermissionsLayer - This essentially defines the users of our system and what level of access they will have to the CM2WManagementPlatform
+	8. AdvancedCoffeeController - Logic for the client's ability to use and modify the AdvancedCoffeeController system
+	9. SimpleCoffeeController - Logic for the client's ability to use and modify the SimpleCoffeeController system
+	10. CM2WNewDeviceIntegration - Logic for adding new devices to the CM2WManagementPlatform
 	
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
@@ -143,8 +147,18 @@ Responsibilities:
 |          |                     |         UC5    |   This will need to be incorporated in the business logic of the reference architecture I have provided, but it hasn't been explicitly provided yet    |
 |  QAS1    |                     |                |   Added a timer into the module view of our system; this will make sure that upgrades using the Simple Coffee Controller are done within the 10 minute timeframe    |
 |  QAS2    |                     |                |   Again, will be using the timer mentioned for QAS2 to make sure that the upgrade, this time using the Advanced Coffee Controller, will take less than 2 hours    |
-|  QAS3    |                     |                |   We have logic specified our in the module view of our system so that new device logic is handled properly. We will use the timer again to ensure we meet our time constraint.    |
+|  QAS3    |                     |                |   We have the CM2WNewDeviceIntegration in our system so that new device logic is handled properly. We will use the timer again to ensure we meet our time constraint.    |
+|      |                     |         Tech-Concern 1       |   Not yet addressed    |
+|      |                     |         Tech-Concern 2       |   Not yet addressed    |
+|      |                     |         Tech-Concern 3       |   Not yet addressed    |
 |  Tech-Concern 4    |                     |                |   Added SQL and NoSQL database access to the data source of the module view    |
+|      |         Tech-Concern 5            |                |   PointOfSalesMobileApp is not specified by Android or iOS, but at least gives us a starting point to implement those specific versions    |
+|  Roles-Concern 1    |                     |                |   PermissionsLayer will control different roles of the system and what user will have access to what features of the CM2WManagementPlatform   |
+|      |                     |       Roles-Concern 2          |  Not yet addressed   |
+|      |                     |       Roles-Concern 3          |  Not yet addressed   |
+|      |                     |       Roles-Concern 4          |  Not yet addressed   |
+|      |                     |       Roles-Concern 5          |  Not yet addressed   |
+|  Roles-Concern 6    |                     |                 |  Again, our PermissionsLayer was designed to give different users of the system different levels of access to our data   |
 |   Legal-Concern 1   |                     |                |   CM2WSecurityLayer will ensure that our system's order are hidden so that clients don't hoard orders up front    |
 |   Legal-Concern 2   |                     |                |   Our system has both the SimpleCoffeeController and AdvancedCoffeeController tied to our security layer, which will prevent network traffic data from being broadcast or used to predict which station is most popular    |
 |      |                     |         Constraint 1       |   Not yet addressed    |
