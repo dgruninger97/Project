@@ -237,3 +237,8 @@ and what classes will be responsible for what actions.
 
 | Element | Responsibility |
 | :---:  |          :---: |
+|     DefinedUser    |        I made this an enum to signify that it was unchanging and that the only users of the system would be the User, the client and the supplier         |
+|  Android/iOS Controller Support |     I was less sure on how to distinguish between the controllers for Android and iOS devices, so I just added that note. When the dev team goes to make the apps, they will know that both controllers will have to be different to adjust to the CM2WManagementPlatform      |
+| Android/iOS GUI Support  |   Similarly, the GUI implementations are different for Android and iOS devices, so I put annotations in so the developers of the system know that        |
+
+## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
