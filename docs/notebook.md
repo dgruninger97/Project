@@ -228,3 +228,10 @@ for our system to function as needed. This will include some of the functions th
 Domain Model: 
 
 ![Mod View](images/DomainModelMethods.png)
+
+#### Important Side Note:
+
+These methods are very abstract and open for change. I am really just trying to get a better idea for when I go to create Class Diagrams. I will not be
+using these either of my reference architectures, it is simply there to get a general idea of where the functionality of the system will be distributed
+and what classes will be responsible for what actions.
+
