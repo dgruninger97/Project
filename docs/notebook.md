@@ -120,7 +120,7 @@ External Research: N/A
 
 Initial Domain Moduel view of the system (Domain Model):
 
-![Mod View](images/ModView.png)
+![Mod View](images/InitialDomainModel.png)
 
 Responsibilities:
 
@@ -219,12 +219,12 @@ for our system to function as needed. This will include some of the functions th
 
 | Design Decision & Location| Rationale |
 | :---:                     |          :---: |
-| Create initial domain model with user objects | This will allow us to specifictly identify and address the issues presented to us, with regards to Role Concerns, in our drivers for this iteration |
+| Improve initial domain model with user objects | This will allow us to specifictly identify and address the issues presented to us, with regards to Role Concerns, in our drivers for this iteration |
 | Introduce two new objects in the presentation layer - one for Android and iOS | Having two models that represent Android and iOS platforms allows us to also finish addressing Technical Concern 5, which was only partially addressed last iteration |
-| Add methods to from ADD iteration 1 | Adding methods allows us to more clearly define what the main business logic of our system will be doing |
+| Add methods to from ADD iteration 1 to domain Model | Adding methods allows us to more clearly define what the main business logic of our system will be doing |
 
 ## Step 6: Sketch Views and Record Design Decisions
 
 Domain Model: 
 
-![Mod View](images/DomainModel.png)
+![Mod View](images/DomainModelMethods.png)
