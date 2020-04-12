@@ -184,9 +184,6 @@ Again, we need to be looking at what needs to be done in order to support the pr
 concerns of our system that were not satisfied in ADD iteration 1. The reason for this being they are critically important to the primary functionality of
 the system. Therefore, in this iteration we will be looking to address the following drivers:
 
-### Security
-	1. Technical Concern 2
-	2. Technical Concern 3
 
 ### Availabiliity
 	1. Technicial Concern 5
@@ -240,5 +237,19 @@ and what classes will be responsible for what actions.
 |     DefinedUser    |        I made this an enum to signify that it was unchanging and that the only users of the system would be the User, the client and the supplier         |
 |  Android/iOS Controller Support |     I was less sure on how to distinguish between the controllers for Android and iOS devices, so I just added that note. When the dev team goes to make the apps, they will know that both controllers will have to be different to adjust to the CM2WManagementPlatform      |
 | Android/iOS GUI Support  |   Similarly, the GUI implementations are different for Android and iOS devices, so I put annotations in so the developers of the system know that        |
+| OperationalManagement  |   This is here if CM2W every wants to change user permissions or define what users are able to do; this isn't spelled out by any driver but I thought it was good to include  |
 
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
+
+#### Important Side Note: 
+
+I defined all of the user classes (USER, CLIENT, SUPPLIER) in the actual class diagram. So when it comes to having users defined, that is what I did. That way I would not have
+to list it in literally every table entry below.
+
+| Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
+| :---     | :---                |     :---:      |          ---: |
+|  Roles-Concern 2        |                     |                |                                 |
+|  Roles-Concern 3        |                     |                |                                 |
+|  Roles-Concern 4        |                     |                |                                 |
+|  Roles-Concern 5        |                     |                |                                 |
+|  Roles-Concern 6        |                     |                |                                 |
