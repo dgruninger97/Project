@@ -118,7 +118,7 @@ External Research: N/A
 
 ## Step 6: Sketch Views and Record Design Decisions
 
-Deployement Pattern view of the system:
+Deployement Pattern view of the system (Module View):
 
 ![Mod View](images/ModView.png)
 
@@ -197,3 +197,19 @@ the system. Therefore, in this iteration we will be looking to address the follo
 	4. Roles Concern 5
 	5. Roles Concern 6
 	
+## Step 3: Choose One or More Elements of the System to Refine
+
+In this iteration, we will be refining both the Module View of our system and translating it into respective designs for both our Mobile Application Architecture
+and our Rich Internet Application. By first focusing on the Module View and then translating onto our specific architectures will allow us to kill two birds
+with one stone in a sense; allowing us to solve problems and then narrow down our decision into our defined architectures. Once we have refined our Module
+View, we can instantiate our architectures.
+
+
+## Step 4: Choose one or More Design Concepts That Satisfy the Selected Drivers
+
+### Design Decision: Convert the module view of our system into more of a domain model so that user objects and methods can be  defined
+
+By adding specified user objects to our system, it will make our system much easier to handle different permissions and allow users to have functionality
+that is different based on what the user is actually supposed to do. One benefit to this approach is that we already have our user PermissionsLayer specified,
+now all we need to do is add our users. Additionally, since we are converting into a domain model, this will allow us to add some methods that are critical
+for our system to function as needed.
