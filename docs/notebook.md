@@ -213,3 +213,10 @@ By adding specified user objects to our system, it will make our system much eas
 that is different based on what the user is actually supposed to do. One benefit to this approach is that we already have our user PermissionsLayer specified,
 now all we need to do is add our users. Additionally, since we are converting into a domain model, this will allow us to add some methods that are critical
 for our system to function as needed.
+
+## Step 5: Instantitate Architetural Elements, Allocate Responsibilities, and Define Interfaces
+
+| Design Decision & Location| Rationale |
+| :---:                     |          :---: |
+| Create initial domain model with methods | This will allow us to specifictly identify and address the issues presented to us in our drivers for this iteration |
+| Introduce two models - one for Android and iOS | Having two models that represent Android and iOS platforms allows us to also finish addressing Technical Concern 5, which was only partially addressed last iteration |
