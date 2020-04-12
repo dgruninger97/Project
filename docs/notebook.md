@@ -6,7 +6,10 @@ Date: 4/8/2020 - 4/11/2020
 
 Lets begin by reviewing the inputs of our system and defining which requirements we will consider as drivers.
 Design Purpose- The purpose of this design is to explore different prototypes to address the CM2W's desire to spread their IoT capabilities into the coffee industry.
-Side Note: For ADD step 1, we can pretty much get all of our information straight from the M1 Initial Drivers Document
+
+#### Side Note:
+
+For ADD step 1, we can pretty much get all of our information straight from the M1 Initial Drivers Document
 
 ### Primary Functional Requirements
 	UC1: User makes coffee on a small/medium/large machine
@@ -261,3 +264,19 @@ through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() 
 |          |                     |        Constraint 4        |           Not addressed                       |
 
 # ADD Iteration: 3
+
+## Step 1: Refining previously created structures to fully address the remaining drivers
+
+At this point in our design of this system, all that is left the address from a driver standpoint are the constraints. All the other drivers have been satisfied
+through architectures, diagrams, or the module view produced by our system.
+
+## Step 2: Establish Iteration Goal by Selecting Drivers
+
+Our drivers for this iteration will be all the remaining ones that we haven't looked at yet. As previously mentioned, our constraints are the only
+drivers remaining, so they will be the drivers looked at during this iteration.
+
+### Modifiability
+	1. Constraint 1
+	2. Constraint 2
+	3. Constraint 3
+	4. Constraint 4
