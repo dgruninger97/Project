@@ -6,7 +6,7 @@ Date: 4/8/2020 - 4/11/2020
 
 Lets begin by reviewing the inputs of our system and defining which requirements we will consider as drivers.
 
-Design Purpose- The purpose of this design is to explore different prototypes to address the CM2W's desire to spread their IoT capabilities into the coffee industry.
+Design Purpose- The purpose of this design is to explore different prototypes to address CM2W's desire to spread their IoT capabilities into the coffee industry.
 
 #### Side Note:
 
@@ -52,7 +52,7 @@ For ADD step 1, we can pretty much get all of our information straight from the 
 For the first step of ADD step 2, we need to consider the drivers of our system.
 To identify our drivers, we need to analyze our quality attribute scenarios, conerns, and constraints. Doing this will help us understand
 the drivers of our system and what approaches can initially be taken to solve them.
-By referring to the M1 Initial Drivers Document, we can identify the following drivers:
+By referring to the M1 Initial Drivers Document, we can identify the following drivers for our first iteration:
 
 ### Performance
 	1. QAS1
@@ -87,7 +87,7 @@ other drivers that we should consider as well. For instance, if the user wants t
 them to have to carry around their laptop all day with them. What if they work at a job where you aren't close to your laptop? Therefore, a mobile application
 would be helpful in the sense that it will allow clients to remotely make coffee or check how much coffee is left (QAS1 + QAS2).
 Additionally, according to external research, mobile applications make it very easy to use REST APIs rather than HTTPS (Technical concerns - 3). Finally,
-using a mobile application will help addresses the ability for the client to authorize CM2W Admins to access their data over an APP (Concerns - Roles 5).
+using a mobile application will help addresses the ability for the client to authorize CM2W Admins to access their data over an app (Concerns - Roles 5).
 
 External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-app
 
@@ -139,12 +139,12 @@ Going off of this, we will define our first reference architecture for this syst
 |  UC1     |                     |                |  Using the CM2W Management platform allows users to order their different sizes of coffee from different machines   |
 |  UC2     |                     |                |   The mobile application reference architecture allow the client to remotely check how much coffee is left    |
 |  UC3     |                     |                |   The CM2W Management platform will allows clients to make orders for their different machines    |
-|       |          UC4           |                |   I haven't yet though about how the supplier to going to function in the business logic of the system, however I already put a security layer in my module view to prevent supplies from being raided as soon as they arrive    |
+|  UC4     |                     |                |  I already put a security layer in my module view to prevent supplies from being raided as soon as they arrive    |
 |          |                     |         UC5    |   This will need to be incorporated in the business logic of the reference architecture I have provided, but it hasn't been explicitly provided yet    |
 |  QAS1    |                     |                |   Added a timer into the module view of our system; this will make sure that upgrades using the Simple Coffee Controller are done within the 10 minute timeframe    |
 |  QAS2    |                     |                |   Again, will be using the timer mentioned for QAS2 to make sure that the upgrade, this time using the Advanced Coffee Controller, will take less than 2 hours    |
 |  QAS3    |                     |                |   We have the CM2WNewDeviceIntegration class in our system so that new device logic is handled properly. We will use the timer again to ensure we meet our time constraint.    |
-|  Tech-Concern 1    |                     |                |   Both SimpleCoffeeController and AdvancedCoffeeController layers have been added to our system in order to support both systems    |
+|  Tech-Concern 1    |                     |                |   Both SimpleCoffeeController and AdvancedCoffeeController classes have been added to our system in order to support both systems    |
 |      |                     |         Tech-Concern 2       |   Not yet addressed    |
 |      |                     |         Tech-Concern 3       |   Not yet addressed    |
 |  Tech-Concern 4    |                     |                |   Added SQL and NoSQL database access to the data source of the module view    |
@@ -270,7 +270,7 @@ through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() 
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
-|  Roles Concern 2        |                     |                |    In order for the clients to be able to set the business rules for controlling access, I've put in a function in the PermissionsLayer called setBusinessRules()                             |
+|  Roles Concern 2 & UC5        |                     |                |    In order for the clients to be able to set the business rules for controlling access, I've put in a function in the PermissionsLayer called setBusinessRules()                             |
 |  Roles Concern 3        |                     |                |    Similarly, I put a function in the CM2WManagementPlatform called requestMoveInventory()                              |
 |  Roles Concern 4        |                     |                |    There is now seeStocks() in the CM2WManagementPlatform                             |
 |  Roles Concern 5        |                     |                |    I added a function called askToMakeCoffee() in the CM2WManagementPlatform, which applies to users                  |
