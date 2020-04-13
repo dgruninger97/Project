@@ -91,16 +91,6 @@ using a mobile application will help addresses the ability for the client to aut
 External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-app
 
 
-### Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
-
-Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like giving the client the ability to check
-how much coffee is left remotely (UC2), allowing the client to order more coffee supplies (UC3), and automatically mapping new devices to the client's account
-when it comes online within two minutes (QAS3). Also after doing some research, I realized that rich internet applications are especially helpful for mobile access,
-integration among many system, and effective data visualition. These are absolutely critical for the CM2W coffee system, and which is why I am also considering
-it as another reference architecture.
-
-External Research: https://www.manufacturing.net/home/article/13055754/5-benefits-of-rich-internet-applications-for-manufacturing-roi
-
 ## Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
 
 ### Design Decision and Location: Add SQL and noSQL databases for the Mobile Application Architecture and the Rich Internet Application Architecture
@@ -145,11 +135,6 @@ Going of this, we can instantiate our two reference architectures for this itera
 ### Mobile Application Architecutre
 ![Mod View](images/AppArchitecture.png)
 
-
-### Rich Internet Application Architecture
-![Mod View](images/RIArchitecture.png)
-
-	
 ### Tactics Considered
 
 #### Performance
@@ -227,7 +212,18 @@ View, we can instantiate our architectures.
 
 ## Step 4: Choose one or More Design Concepts That Satisfy the Selected Drivers
 
+### Design Decision: Logically structure our user based system using the Rich Internet Application Architecture
+
+Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like giving the client the ability to check
+how much coffee is left remotely (UC2), allowing the client to order more coffee supplies (UC3), and automatically mapping new devices to the client's account
+when it comes online within two minutes (QAS3). Also after doing some research and going further into the project, I realized that rich internet applications are especially helpful for mobile access,
+integration among many system, and effective data visualition. These are absolutely critical for the CM2W coffee system, and which is why I am also considering
+it as another reference architecture.
+
+External Research: https://www.manufacturing.net/home/article/13055754/5-benefits-of-rich-internet-applications-for-manufacturing-roi
+
 ### Design Decision: Convert the module view of our system into more of a domain model so that user objects and methods can be  defined
+
 
 By adding specified user objects to our system, it will make our system much easier to handle different permissions and allow users to have functionality
 that is different based on what the user is actually supposed to do. One benefit to this approach is that we already have our user PermissionsLayer specified,
@@ -243,6 +239,13 @@ for our system to function as needed. This will include some of the functions th
 | Add methods to from ADD iteration 1 to domain Model | Adding methods allows us to more clearly define what the main business logic of our system will be doing |
 
 ## Step 6: Sketch Views and Record Design Decisions
+
+### Rich Internet Application Architecture
+![Mod View](images/RIArchitecture.png)
+
+After developing the architecture for the rich internet application, I have decided more of the system should be designed for a mobile application, and so from
+here on our, I will base my arhictectures on that. I am simply doing this because there is not a lot of fundamental architectural different between the two,
+and mobile applications also seem to satisfy more drivers that rich internet applications.
 
 Domain Model with useful methods: 
 
@@ -291,6 +294,7 @@ through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() 
 |          |                     |        Constraint 4        |           Not addressed                       |
 
 # ADD Iteration: 3
+
 
 Date: 4/12/2020
 
