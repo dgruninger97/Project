@@ -323,7 +323,7 @@ from the previous iteration.
 |   Add c files in the data_source                   |      This will allow us to load in the C programs into the Java represented classes        |
 |   Make SimpleCoffeeController a subclass of AdvancedCoffeeController                   |      This will allow us to put a dispenseCoffee function in AdvancedCoffeeController, signifying that the SimpleCoffeeController doesn't have it        |
 |   Use the Observer pattern for Machines                   |      This will allow machines to push their status to the CM2WManagementPlatform and not have the CM2WManagementPlatform constantly polling for their status -- to do this I will be adding a seperate class to act as the subsriber of our system        |
-|    In order for our system to have no application state, we will be storing application state data in the local cache seen to the left of the Domain layer                        |        We are doing this so we don't have any application state          |
+|    In order for our system to have no application state, we will be storing application state data in the local cache seen to the right of the Domain layer                        |        We are doing this so we don't have any application state          |
 ### Side Note
 
 
