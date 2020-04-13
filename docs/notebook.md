@@ -170,7 +170,7 @@ Date: 4/11/2020 - 4/12/2020
 
 I think it is important here to realize that I left a lot of the design  open to interpretation from ADD Iteration 1. In this iteration, I will be
 narrowing down on structures that I know will specifically address the concerns, constraints, and use cases that were not satisfied in my previous iteration.
-Our goal for this iteration is to begin thinking about what specific units we will use to implement our system. This will allow of to further divide the work
+Our goal for this iteration is to begin thinking about what specific units we will use to implement our system. This will allow us to further divide the work
 up into teams so that we have people working on specific areas of the system that they are trained for when development begins. I will additionally do another reference architecture
 for consideration in this milestone. Finally, I should note that a lot of addressed drivers in the previous milestone need methods to specifically address the
 driver. Therefore, those methods will be added in this iteration.
@@ -204,7 +204,7 @@ another architecture, and then move on to creating a Class Diagram from our Doma
 Rationale: It should be pretty clear that our system will heavily rely on the internet for several operations like giving the client the ability to check
 how much coffee is left remotely (UC2), allowing the client to order more coffee supplies (UC3), and automatically mapping new devices to the client's account
 when it comes online within two minutes (QAS3). Also after doing some research and going further into the project, I realized that rich internet applications are especially helpful for mobile access,
-integration among many system, and effective data visualition. These are absolutely critical for the CM2W coffee system, and which is why I am also considering
+integration among many systems, and effective data visualition. These are absolutely critical for the CM2W coffee system, and which is why I am also considering
 it as another reference architecture.
 
 External Research: https://www.manufacturing.net/home/article/13055754/5-benefits-of-rich-internet-applications-for-manufacturing-roi
@@ -231,17 +231,22 @@ for our system to function as needed. This will include some of the functions th
 ![Mod View](images/RIArchitecture.png)
 
 After developing the architecture for the rich internet application, I have decided more of the system should be designed for a mobile application, and so from
-here on our, I will base my arhictectures on that. I am simply doing this because there is not a lot of fundamental architectural different between the two,
-and mobile applications also seem to satisfy more drivers that rich internet applications.
+here on our, I will base my architectures on that. I am simply doing this because there is not a lot of fundamental architectural different between the two,
+and mobile applications also seem to satisfy more drivers that rich internet applications. Additionally, I just believe it makes overall sense to use a mobile
+app rather than a Rich Internet Application. Ordering coffee is something that companies like Starbucks use mobiles apps for, and was the best selling Apple
+app until recently. More people are using apps to order coffee that their computers or phone browsers, so we're gonna stick with that to have a larger
+customer base and address more drivers.
 
-Domain Model with useful methods: 
+External Research: https://www.emarketer.com/content/apple-pay-overtakes-starbucks-as-top-mobile-payment-app-in-the-us
+
+Class Diagram: 
 
 ![Mod View](images/DomainModelMethods.png)
 
 #### Important Side Note:
 
-These methods are very abstract and open for change. I am really just trying to get a better idea for when I go to create Class Diagrams. I will not be
-using these either of my reference architectures, it is simply there to get a general idea of where the functionality of the system will be distributed
+These methods are open for change. I am really just trying to get a better idea for when I go to create finalize the Class Diagram. These methods
+are simply here to get a general idea of where the functionality of the system will be distributed
 and what classes will be responsible for what actions.
 
 | Element | Responsibility |
@@ -273,7 +278,7 @@ through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() 
 |  Roles Concern 3        |                     |                |    Similarly, I put a function in the CM2WManagementPlatform called requestMoveInventory()                              |
 |  Roles Concern 4        |                     |                |    There is now seeStocks() in the CM2WManagementPlatform                             |
 |  Roles Concern 5        |                     |                |    I added a function called askToMakeCoffee() in the CM2WManagementPlatform, which applies to users                  |
-|  Roles Concern 6        |                     |                |    There is another function called authorizeAdminsAccess(), but I put this one in PermissionsAccess instead of CM2WManagementPlatform                              |
+|  Roles Concern 6        |                     |                |    There is another function called authorizeAdminsAccess(), but I put this one in PermissionsAccess instead of CM2WManagementPlatform because it pertains to granting permissions to users                              |
 |  Technical Concern 5        |                     |                |    Added Android and iOS annotations for both the domain layer and the presentation layer to handle both the Model and the Controller differences between Android and iOS apps                              |
 |          |                     |        Constraint 1        |           Not addressed                       |
 |          |                     |        Constraint 2        |           Not addressed                       |
@@ -287,8 +292,8 @@ Date: 4/12/2020
 
 ## Step 1: Refining previously created structures to fully address the remaining drivers
 
-At this point in our design of this system, all that is left the address from a driver standpoint are the constraints. All the other drivers have been satisfied
-through architectures, diagrams, or the module view produced by our system.
+At this point in our design of this system, all that is left to address from a driver standpoint are the constraints. All the other drivers have been satisfied
+through architectures, diagrams, or the class diagram produced in the previous two iterations.
 
 ## Step 2: Establish Iteration Goal by Selecting Drivers
 
@@ -318,6 +323,9 @@ from the previous iteration.
 |   Add c files in the data_source                   |      This will allow us to load in the C programs into the Java represented classes        |
 |   Make SimpleCoffeeController a subclass of AdvancedCoffeeController                   |      This will allow us to put a dispenseCoffee function in AdvancedCoffeeController, signifying that the SimpleCoffeeController doesn't have it        |
 |   Use the Observer pattern for Machines                   |      This will allow machines to push their status to the CM2WManagementPlatform and not have the CM2WManagementPlatform constantly polling for their status -- to do this I will be adding a seperate class to act as the subsriber of our system        |
+|    In order for our system to have no application state, we will be storing application state data in the local cache seen to the left of the Domain layer                        |        We are doing this so we don't have any application state          |
+### Side Note
+
 
 ## Step 6: Sketch Views and Record Design Decisions
 
