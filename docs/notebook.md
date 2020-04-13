@@ -5,6 +5,7 @@ Date: 4/8/2020 - 4/11/2020
 ## Step 1: Review Inputs
 
 Lets begin by reviewing the inputs of our system and defining which requirements we will consider as drivers.
+
 Design Purpose- The purpose of this design is to explore different prototypes to address the CM2W's desire to spread their IoT capabilities into the coffee industry.
 
 #### Side Note:
@@ -48,9 +49,9 @@ For ADD step 1, we can pretty much get all of our information straight from the 
 		
 ## Step 2: Establish Iteration Goal by Selecting Drivers
 
-For the first step of ADD step 2, we need to consider the drivers for our system.
-To identify our drivers, we need to analyze our quality attribute scenarios, conerns, roles, legal issues and constraints. Doing this will help us understand
-the drivers of our system.
+For the first step of ADD step 2, we need to consider the drivers of our system.
+To identify our drivers, we need to analyze our quality attribute scenarios, conerns, and constraints. Doing this will help us understand
+the drivers of our system and what approaches can initially be taken to solve them.
 By referring to the M1 Initial Drivers Document, we can identify the following drivers:
 
 ### Performance
