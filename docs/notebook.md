@@ -77,7 +77,7 @@ Since this is greenfield development, we will be refining the entire CM2W coffee
 ## Step 4: Choose One or More Design Concepts That Satisfy the Selected Drivers
 
 Because this is our first iteration of the ADD process, our goal will be to establish an initial overall system structure. To do so, we will be considering
-a couple reference architectures and deployements to satisfy our drivers.
+our first reference architectures and a module view to satisfy our drivers.
 
 ### Design Decision: Logically structure our user based system using the Mobile Application Architecture
 
@@ -125,7 +125,7 @@ Going off of this, we will define our first reference architecture for this syst
 
 #### Performance
 	1. Control resource demand: This was largely addressed with my system by quickly accounting for two databases. Doing this allows us to properly manage
-	where the data of the system is going.
+	where the data of the system is going. This will help reduce the traffic for database access.
 
 #### Security
 	1. Resisting attacks: So this was a little hard to incorporate with the initial module view, but I ended up putting a security layer in the system in hopes
@@ -137,13 +137,13 @@ Going off of this, we will define our first reference architecture for this syst
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
 |  UC1     |                     |                |  Using the CM2W Management platform allows users to order their different sizes of coffee from different machines   |
-|  UC2     |                     |                |   The mobile application reference architecture along with the rich internet application both allow the client to remotely check how much coffee is left    |
+|  UC2     |                     |                |   The mobile application reference architecture allow the client to remotely check how much coffee is left    |
 |  UC3     |                     |                |   The CM2W Management platform will allows clients to make orders for their different machines    |
 |       |          UC4           |                |   I haven't yet though about how the supplier to going to function in the business logic of the system, however I already put a security layer in my module view to prevent supplies from being raided as soon as they arrive    |
 |          |                     |         UC5    |   This will need to be incorporated in the business logic of the reference architecture I have provided, but it hasn't been explicitly provided yet    |
 |  QAS1    |                     |                |   Added a timer into the module view of our system; this will make sure that upgrades using the Simple Coffee Controller are done within the 10 minute timeframe    |
 |  QAS2    |                     |                |   Again, will be using the timer mentioned for QAS2 to make sure that the upgrade, this time using the Advanced Coffee Controller, will take less than 2 hours    |
-|  QAS3    |                     |                |   We have the CM2WNewDeviceIntegration in our system so that new device logic is handled properly. We will use the timer again to ensure we meet our time constraint.    |
+|  QAS3    |                     |                |   We have the CM2WNewDeviceIntegration class in our system so that new device logic is handled properly. We will use the timer again to ensure we meet our time constraint.    |
 |  Tech-Concern 1    |                     |                |   Both SimpleCoffeeController and AdvancedCoffeeController layers have been added to our system in order to support both systems    |
 |      |                     |         Tech-Concern 2       |   Not yet addressed    |
 |      |                     |         Tech-Concern 3       |   Not yet addressed    |
