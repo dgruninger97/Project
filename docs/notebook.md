@@ -143,11 +143,11 @@ Responsibilities:
 Going of this, we can instantiate our two reference architectures for this iteration
 
 ### Mobile Application Architecutre
-![Mod View](images/AppArchitecture)
+![Mod View](images/AppArchitecture.png)
 
 
 ### Rich Internet Application Architecture
-![Mod View](images/RIArchitecture)
+![Mod View](images/RIArchitecture.png)
 
 	
 ### Tactics Considered
