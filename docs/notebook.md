@@ -331,4 +331,4 @@ from the previous iteration.
 
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
-At this point, we have satisfied all of our drivers and presented a different design for each iteration
+At this point, we have satisfied all of our drivers and presented a different design for each iteration.
