@@ -265,6 +265,8 @@ through the PermissionsLayer's setDefinedUser() function, etc. SetDefinedUser() 
 
 # ADD Iteration: 3
 
+Date: 4/12/2020
+
 ## Step 1: Refining previously created structures to fully address the remaining drivers
 
 At this point in our design of this system, all that is left the address from a driver standpoint are the constraints. All the other drivers have been satisfied
