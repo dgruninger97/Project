@@ -169,11 +169,11 @@ Date: 4/11/2020 - 4/12/2020
 ## Step 1: Identifying Structures to Support Primary Functionality
 
 I think it is important here to realize that I left a lot of the design  open to interpretation from ADD Iteration 1. In this iteration, I will be
-narrowing down on structures that I know will specifically address the concerns, constraints, and use cases that were not satisfied in my previous iteration
+narrowing down on structures that I know will specifically address the concerns, constraints, and use cases that were not satisfied in my previous iteration.
 Our goal for this iteration is to begin thinking about what specific units we will use to implement our system. This will allow of to further divide the work
-up into teams so that we have people working on specific areas of the system that they are trained for. I will additionally do another reference architecture
+up into teams so that we have people working on specific areas of the system that they are trained for when development begins. I will additionally do another reference architecture
 for consideration in this milestone. Finally, I should note that a lot of addressed drivers in the previous milestone need methods to specifically address the
-driver. Therefor, those methods will be added in this iteration.
+driver. Therefore, those methods will be added in this iteration.
 
 ## Step 2: Establish Iteration Goal by Selecting Drivers
 
@@ -192,10 +192,9 @@ the system. Therefore, in this iteration we will be looking to address the follo
 	
 ## Step 3: Choose One or More Elements of the System to Refine
 
-In this iteration, we will be refining both the Module View of our system and translating it into respective designs for both our Mobile Application Architecture
-and our Rich Internet Application. By first focusing on the Module View and then translating onto our specific architectures will allow us to kill two birds
-with one stone in a sense; allowing us to solve problems and then narrow down our decision into our defined architectures. Once we have refined our Module
-View, we can instantiate our architectures.
+In this iteration, we will be considering another reference architecture . I will go into detail on that in the next step, but I also want to add methods to
+our domain model so it looks more like a Class Diagram. This will give us a better understand of the functionality of each part in our system. I will first consider
+another architecture, and then move on to creating a Class Diagram from our Domain Model.
 
 
 ## Step 4: Choose one or More Design Concepts That Satisfy the Selected Drivers
@@ -213,9 +212,9 @@ External Research: https://www.manufacturing.net/home/article/13055754/5-benefit
 ### Design Decision: Convert the module view of our system into more of a domain model so that user objects and methods can be  defined
 
 
-By adding specified user objects to our system, it will make our system much easier to handle different permissions and allow users to have functionality
+By adding specified user objects and methods to our system, it will make our system much easier to handle different permissions and allow users to have functionality
 that is different based on what the user is actually supposed to do. One benefit to this approach is that we already have our user PermissionsLayer specified,
-now all we need to do is add our users. Additionally, since we are converting into a domain model, this will allow us to add some methods that are critical
+now all we need to do is add our users. Additionally, since we are converting into a class diagram, this will allow us to add some methods that are critical
 for our system to function as needed. This will include some of the functions that we mentioned we needed to add in our first ADD iteration.
 
 ## Step 5: Instantitate Architetural Elements, Allocate Responsibilities, and Define Interfaces
