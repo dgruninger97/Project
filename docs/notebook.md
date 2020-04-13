@@ -93,14 +93,14 @@ External Research: https://savvyapps.com/blog/how-to-build-restful-api-mobile-ap
 
 ## Step 5: Instantiate Architectural Elements, Allocate Responsibility, and Define Interfaces
 
-### Design Decision and Location: Add SQL and noSQL databases for the Mobile Application Architecture and the Rich Internet Application Architecture
+### Design Decision and Location: Add SQL and noSQL databases for the Mobile Application Architecture
 
 Rationale: In order for our mobile application to be highly scalable and address our Modifiability driver for this iteration, we need to use SQL and noSQL
-database platforms for our data source in the Mobile Application Reference Architecture and Rich Internet Application Architecture.
+database platforms for our data source in the Mobile Application Reference Architecture.
 
 External Research: N/A
 
-### Design Decision and Location: Add security layers to the Mobile and Rich Internet Application Architecture's that hide network traffic and office supplies
+### Design Decision and Location: Add security layers to the Mobile Application Architecture's that hide network traffic and office supplies
 
 Rationale: This decision comes from our two concerns regarding privacy and legal concerns (Concerns - Legal/data privacy issues 1 and Concerns - Legal/data privacy issues 2)
 Adding these security layers to our architecture will allow us to address these concerns; and now clients wont have the ability to immediately buy up all the
@@ -115,22 +115,7 @@ Initial Module view of the system (Module View):
 
 ![Mod View](images/InitialDomainModel.png)
 
-Responsibilities:
-
-	1. PointOfSalesMobileApp - This will be the main UI of our system, and will display relavent data to the resepctive user of the application
-	2. CM2WSecurityLayer - This hides all network traffic so as to protect user data privacy. Additionally, this will keep supply order information
-	private so that people don't take all of the arriving supplies; per Legal/Privacy conerns 1 & 2
-	3. CM2WManagementPlatform - This is going to be where the business logic of CM2W's coffee system will reside.
-	4. SQLDBAccess - SQLDBAccess will grant our system access to a SQLDatabase; per Technology Conern 4
-	5. NoSQLDBAccess - NoSQLDBAccess will grant our system access to a NoSQLDatabase; per Technology Conern 4
-	6. UpgradeTimer - This will time the upgrades of our system and notify our CM2WManagementPlatform if an upgrade takes too long
-	7. PermissionsLayer - This essentially defines the users of our system and what level of access they will have to the CM2WManagementPlatform
-	8. AdvancedCoffeeController - Logic for the client's ability to use and modify the AdvancedCoffeeController system
-	9. SimpleCoffeeController - Logic for the client's ability to use and modify the SimpleCoffeeController system
-	10. CM2WNewDeviceIntegration - Logic for adding new devices to the CM2WManagementPlatform
-	11. Machine -- represents a coffee machine in our system
-	
-Going of this, we can instantiate our two reference architectures for this iteration
+Going off of this, we will define our first reference architecture for this system.
 
 ### Mobile Application Architecutre
 ![Mod View](images/AppArchitecture.png)
