@@ -121,7 +121,7 @@ External Research: N/A
 
 ## Step 6: Sketch Views and Record Design Decisions
 
-Initial Module view of the system (Domain Model):
+Initial Module view of the system (Module View):
 
 ![Mod View](images/InitialDomainModel.png)
 
@@ -139,6 +139,16 @@ Responsibilities:
 	9. SimpleCoffeeController - Logic for the client's ability to use and modify the SimpleCoffeeController system
 	10. CM2WNewDeviceIntegration - Logic for adding new devices to the CM2WManagementPlatform
 	11. Machine -- represents a coffee machine in our system
+	
+Going of this, we can instantiate our two reference architectures for this iteration
+
+### Mobile Application Architecutre
+![Mod View](images/AppArchitecture)
+
+
+### Rich Internet Application Architecture
+![Mod View](images/RIArchitecture)
+
 	
 ### Tactics Considered
 
