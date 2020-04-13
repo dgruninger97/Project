@@ -280,3 +280,26 @@ drivers remaining, so they will be the drivers looked at during this iteration.
 	2. Constraint 2
 	3. Constraint 3
 	4. Constraint 4
+	
+## Step 3: Choose One or More Elements of the System to Refine
+
+If we are going to go off our previous diagrams, it is pretty clear that we will be doing most of the work in the domain layer of our system.
+
+## Step 4: Choose one or More Design Concepts That Satisfy the Selected Drivers
+
+The best approach here is to understand that our changes need to be made in the domain layer of our existing domain diagram. The changes are not big enough
+to warrant huge design decisions. Instead, the best approach here is to understand that our problems can be solved so long as we properly modify our diagram
+from the previous iteration.
+
+## Step 5: Instantitate Architetural Elements, Allocate Responsibilities, and Define Interfaces
+
+| Design Decision & Location| Rationale |
+| :---:                     |          :---: |
+|   Add c files in the data_source                   |      This will allow us to load in the C programs into the Java represented classes        |
+|   Make SimpleCoffeeController a subclass of AdvancedCoffeeController                   |      This will allow us to put a dispenseCoffee function in AdvancedCoffeeController, signifying that the SimpleCoffeeController doesn't have it        |
+|   Use the Observer pattern for Machines                   |      This will allow machines to push their status to the CM2WManagementPlatform and not have the CM2WManagementPlatform constantly polling for their status -- to do this I will be adding a seperate class to act as the subsriber of our system        |
+
+## Step 6: Sketch Views and Record Design Decisions
+
+![Mod View](images/FinalDomainModel.png)
+
