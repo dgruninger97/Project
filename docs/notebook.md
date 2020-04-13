@@ -140,6 +140,17 @@ Responsibilities:
 	10. CM2WNewDeviceIntegration - Logic for adding new devices to the CM2WManagementPlatform
 	11. Machine -- represents a coffee machine in our system
 	
+### Tactics Considered
+
+#### Performance
+	1. Control resource demand: This was largely addressed with my system by quickly accounting for two databases. Doing this allows us to properly manage
+	where the data of the system is going.
+
+#### Security
+	1. Resisting attacks: So this was a little hard to incorporate with the initial module view, but I ended up putting a security layer in the system in hopes
+	that I would elaborate on it in future iterations to provide a layer against network attacks. Also, something internal, having a permissions layer is good
+	general security that will help ensure the users of the system are doing only what they should be doing.
+	
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
@@ -187,16 +198,14 @@ Again, we need to be looking at what needs to be done in order to support the pr
 concerns of our system that were not satisfied in ADD iteration 1. The reason for this being they are critically important to the primary functionality of
 the system. Therefore, in this iteration we will be looking to address the following drivers:
 
-
-### Availabiliity
-	1. Technicial Concern 5
 	
 ### Usability
-	1. Roles Concern 2
-	2. Roles Concern 3
-	3. Roles Concern 4
-	4. Roles Concern 5
-	5. Roles Concern 6
+	1. Technicial Concern 5
+	2. Roles Concern 2
+	3. Roles Concern 3
+	4. Roles Concern 4
+	5. Roles Concern 5
+	6. Roles Concern 6
 	
 ## Step 3: Choose One or More Elements of the System to Refine
 
@@ -241,6 +250,14 @@ and what classes will be responsible for what actions.
 |  Android/iOS Controller Support |     I was less sure on how to distinguish between the controllers for Android and iOS devices, so I just added that note. When the dev team goes to make the apps, they will know that both controllers will have to be different to adjust to the CM2WManagementPlatform      |
 | Android/iOS GUI Support  |   Similarly, the GUI implementations are different for Android and iOS devices, so I put annotations in so the developers of the system know that        |
 | OperationalManagement  |   This is here if CM2W every wants to change user permissions or define what users are able to do; this isn't spelled out by any driver but I thought it was good to include  |
+
+
+## Tactics Considered
+
+#### Usability
+	1. Supporting system initiative. Have both Android and iOS GUI & controller support means that users can access the CM2WManagementPlatform on both Android devices and
+	Apple devices
+	
 
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
@@ -305,3 +322,13 @@ from the previous iteration.
 
 ![Mod View](images/FinalDomainModel.png)
 
+## Tactics Considered:
+
+#### Modifiability
+	1. Increase Cohesion: I ensured that all the classes and methods that were added to our preliminary class diagram were in the right place and belonged where
+	they did.
+	2. Reduce Coupling: This is one area that will continue to need improvement more future consideration, as there is a fair amount of coupling within our system currently.
+
+## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
+
+At this point, we have satisfied all of our drivers and presented a different design for each iteration
