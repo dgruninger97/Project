@@ -168,10 +168,12 @@ Date: 4/11/2020 - 4/12/2020
 
 ## Step 1: Identifying Structures to Support Primary Functionality
 
-I think it is important here to realize that I left a lot of the design vauge and open to interpretation from ADD Iteration 1. In this iteration, I will be
+I think it is important here to realize that I left a lot of the design  open to interpretation from ADD Iteration 1. In this iteration, I will be
 narrowing down on structures that I know will specifically address the concerns, constraints, and use cases that were not satisfied in my previous iteration
 Our goal for this iteration is to begin thinking about what specific units we will use to implement our system. This will allow of to further divide the work
-up into teams so that we have people working on specific areas of the system that they are trained for.
+up into teams so that we have people working on specific areas of the system that they are trained for. I will additionally do another reference architecture
+for consideration in this milestone. Finally, I should note that a lot of addressed drivers in the previous milestone need methods to specifically address the
+driver. Therefor, those methods will be added in this iteration.
 
 ## Step 2: Establish Iteration Goal by Selecting Drivers
 
