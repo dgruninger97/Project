@@ -386,3 +386,9 @@ Design 1:
 
 Design 2: QAS4 was not addressed here. In order to properly address this, it probably would make sense for the author to include an additional backup-designated
 server so that they could have something ready for when cell services go down.
+
+### What known Tactics from the back of our book did the notebook use to address the Quality Attribute Scenarios?
+
+Design 1: 
+
+Design 2: No tactics were used to address the Quality Attribute Scenarios in this design.
