@@ -341,3 +341,16 @@ from the previous iteration.
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
 At this point, we have satisfied all of our drivers.
+
+
+# Project Milestone 2
+
+## Assessing Completeness
+
+Time Spent: 
+
+### 1. Which Use Cases did the notebook's designs address? In short: how did it address them?
+
+Design 1: 
+
+Design 2: 
