@@ -392,3 +392,12 @@ server so that they could have something ready for when cell services go down.
 Design 1: 
 
 Design 2: No tactics were used to address the Quality Attribute Scenarios in this design.
+
+### Did the notebook pull from external research? What did that research really add to the design? 
+
+Design 1:
+
+Design 2: Yes. The research provided by the external sources helped reinforce many of the design decisions that were made early on. This greatly helped the design
+by backing up the decisions he made with these external sources. For instance, the load balancing algorithm that was used to address the time concerns listed in the
+use cases was reinforced by research that indicated that it would be used to "make sure that requests are being processed in the quickest time possible." There are 10
+external sources used throughout the document for even more supporting information.
