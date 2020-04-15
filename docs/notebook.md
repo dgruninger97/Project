@@ -375,4 +375,14 @@ wise for the author to consolidate "Management Apps" and "Client App", since bot
 
 Design 1:
 
-Design 2:
+Design 2: This design addressed every QAS, except for QAS4. The author of the notebook utilized some cool patterns for the other quality attribute scenarios. For instance,
+QAS1,2 and 3 were all addressed by using the Load-Balanced Cluters deplayement pattern. This pattern is utilized for it's scalability and performance. This pattern will
+also utilize the many severs that were put in the architectural design. Additionally, using controllers that connect to the internet over HSDPA addressed QAS5
+by "increasing data capacity and speed up transfer rates", which helps dispense coffee during the morning rush.
+
+### Which Quality Attribute Scenarios remain unaddressed by this notebook? 
+
+Design 1: 
+
+Design 2: QAS4 was not addressed here. In order to properly address this, it probably would make sense for the author to include an additional backup-designated
+server so that they could have something ready for when cell services go down.
