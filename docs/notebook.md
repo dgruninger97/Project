@@ -351,7 +351,6 @@ Time Spent:
 
 ### 1. Which Use Cases did the notebook's designs address? In short: how did it address them?
 
-Design 1: 
-
+Design 1: Test data
 
 Design 2: 
