@@ -406,4 +406,5 @@ external sources used throughout the document for even more supporting informati
 
 Design 1: 
 
-Design 2: 
+Design 2: Although there was not a list-style comparison of the pros & cons of the system, the author certainly analyzed the pros and cons in the rationale
+when deciding the better of two candidate designs. 
