@@ -356,6 +356,23 @@ Design 1:
 Design 2: The notebook here addressed all of the use cases for the system. It did so by first selecting a service application in the first iteration and instantiating several elements
 which were responsbile for achieving the use cases in the second iteration. The Client Element identified in iteration 2 could access the coffee machines and remotely check how
 much coffee is left (UC2). The Client element also can make manual requests for more inventory from the supplier regarding different machines (UC3)
-Additionally, the User element allows for users to be able to make coffee on machines (UC1). The Suplier Service element is responsible
+Additionally, the User element allows for users to be able to make coffee on machines (UC1).
+The Suplier Service element is responsible
 for taking requests from the supplier (UC4). The Client element also specifically mentions how it allows Admins to access data over the phone or through the
 app, depending on the rules specified by the client.
+
+
+### 2. Which Use Cases remain unaddressed by this notebook?
+
+Design 1: 
+
+Design 2: Although all of the use cases were properly addressed, I do have a couple comments. The author needs to fully spell out the first use case, and make
+sure that the users can select different sizes of coffee (small, medium, large). This use case was addressed, but could have been clarified. Also, I think it might be
+wise for the author to consolidate "Management Apps" and "Client App", since both involve the CM2W Administrator monitoring access to machines and usages.
+
+
+### Which Quality Attribute Scenarios did the notebook's designs address? In short: how did it address them?
+
+Design 1:
+
+Design 2:
