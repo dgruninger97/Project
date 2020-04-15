@@ -371,7 +371,7 @@ sure that the users can select different sizes of coffee (small, medium, large).
 wise for the author to consolidate "Management Apps" and "Client App", since both involve the CM2W Administrator monitoring access to machines and usages.
 
 
-### Which Quality Attribute Scenarios did the notebook's designs address? In short: how did it address them?
+### 3. Which Quality Attribute Scenarios did the notebook's designs address? In short: how did it address them?
 
 Design 1:
 
@@ -380,20 +380,20 @@ QAS1,2 and 3 were all addressed by using the Load-Balanced Cluters deplayement p
 also utilize the many severs that were put in the architectural design. Additionally, using controllers that connect to the internet over HSDPA addressed QAS5
 by "increasing data capacity and speed up transfer rates", which helps dispense coffee during the morning rush.
 
-### Which Quality Attribute Scenarios remain unaddressed by this notebook? 
+### 4. Which Quality Attribute Scenarios remain unaddressed by this notebook? 
 
 Design 1: 
 
 Design 2: QAS4 was not addressed here. In order to properly address this, it probably would make sense for the author to include an additional backup-designated
 server so that they could have something ready for when cell services go down.
 
-### What known Tactics from the back of our book did the notebook use to address the Quality Attribute Scenarios?
+### 5. What known Tactics from the back of our book did the notebook use to address the Quality Attribute Scenarios?
 
 Design 1: 
 
 Design 2: No tactics were used to address the Quality Attribute Scenarios in this design.
 
-### Did the notebook pull from external research? What did that research really add to the design? 
+### 6. Did the notebook pull from external research? What did that research really add to the design? 
 
 Design 1:
 
@@ -401,3 +401,9 @@ Design 2: Yes. The research provided by the external sources helped reinforce ma
 by backing up the decisions he made with these external sources. For instance, the load balancing algorithm that was used to address the time concerns listed in the
 use cases was reinforced by research that indicated that it would be used to "make sure that requests are being processed in the quickest time possible." There are 10
 external sources used throughout the document for even more supporting information.
+
+### 7. Did the notebook compare the pros/cons of possible ideas? 
+
+Design 1: 
+
+Design 2: 
