@@ -368,7 +368,9 @@ app, depending on the rules specified by the client.
 
 ### 2. Which Use Cases remain unaddressed by this notebook?
 
-Design 1: UC2 & UC5 both remain unaddressed.
+Design 1: UC2 & UC5 both remain unaddressed. I think this could have been avoided if the author tried to address each use case individually rather than just
+all of the primary functionality in one iteration. In this case, it lead to use cases being left out and the system not addressing all of the initial drivers
+laid out by M1.
 
 Design 2: Although all of the use cases were properly addressed, I do have a couple comments. The author needs to fully spell out the first use case, and make
 sure that the users can select different sizes of coffee (small, medium, large). This use case was addressed, but could have been clarified. Also, I think it might be
@@ -377,7 +379,9 @@ wise for the author to consolidate "Management Apps" and "Client App", since bot
 
 ### 3. Which Quality Attribute Scenarios did the notebook's designs address? In short: how did it address them?
 
-Design 1:
+Design 1: This design was able to explicity address each QAS for our initial drivers. It did so by devouting an entire interation (ADD Iteration 2, the second one -- there were 2 ADD Iteations 2s)
+to the Quality Attribute scenarios. It then went on to add more conceptual classes to the domain diagram to address those issues, along with sketching a system
+sequence diagram to describe how different parts of the system would react to the morning rush for coffee.
 
 Design 2: This design addressed every QAS, except for QAS4. The author of the notebook utilized some cool patterns for the other quality attribute scenarios. For instance,
 QAS1,2 and 3 were all addressed by using the Load-Balanced Cluters deplayement pattern. This pattern is utilized for it's scalability and performance. This pattern will
