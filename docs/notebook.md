@@ -406,7 +406,10 @@ Design 2: No tactics were used to address the Quality Attribute Scenarios in thi
 
 ### 6. Did the notebook pull from external research? What did that research really add to the design? 
 
-Design 1:
+Design 1: Yes. There was a lot of external research from many different sources. This primarily helped with the domain models and addressing the architectural
+constraints of the system. As a result, the domain models of the system were very sophisticated and well developed. Additionally, the author did a goob job
+of addressing the architectual concerns of the system, and was able to identify some key considerations by using REST APIs over HTTPS. As a result of identifying
+those key considerations, the author picked their reference architecture with even more supporting informatiom.
 
 Design 2: Yes. The research provided by the external sources helped reinforce many of the design decisions that were made early on. This greatly helped the design
 by backing up the decisions he made with these external sources. For instance, the load balancing algorithm that was used to address the time concerns listed in the
