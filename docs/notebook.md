@@ -426,7 +426,10 @@ when deciding the better of two candidate designs.
 
 ### 8. Was it convenient for you to find the above information? 
 
-Design 1:
+Design 1: No. Although the notebook was organized into the 3 ADD iterations that were taken, along with all of the ADD steps, finding the information above
+took a long time and was not convenient to find. The reason for this is simple; the author hardly ever explicity stated what he was addressing during each iteration.
+Instead, the author took a general approach to the drivers and did not mention them specifically. As a result, the drivers were very hard to locate and even harder to understand
+where they were being addressed.
 
 Design 2: Yes. The notebook was well organized and neatly laid out.
 
