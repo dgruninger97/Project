@@ -364,7 +364,11 @@ app, depending on the rules specified by the client.
 
 ### 2. Which Use Cases remain unaddressed by this notebook?
 
-Design 1: 
+Design 1: This document addressed all of the use cases; but it did so in a different fashion from Design 2. Specifically, it addressed only the primary
+functionality of the system. The author ended up modifying both of their reference architectures, and by also instantiating a sequence diagram to go over the workflow
+of a user purchasing coffee, displaying what elements of the system would be respoonsible for what actions. Additionally, a domain model was instantiated in order
+to display what nouns would be involved in solving the primary functionality, including the use cases, of the system. I should reiterate that all the use cases were handeled,
+although they were not explicity cited in the notebook.
 
 Design 2: Although all of the use cases were properly addressed, I do have a couple comments. The author needs to fully spell out the first use case, and make
 sure that the users can select different sizes of coffee (small, medium, large). This use case was addressed, but could have been clarified. Also, I think it might be
@@ -414,3 +418,12 @@ when deciding the better of two candidate designs.
 Design 1:
 
 Design 2: Yes. The notebook was well organized and neatly laid out.
+
+## Sunny Day Test
+
+Design 1: 
+
+Design 2: 
+
+### 1. Write down the steps that you imagine the user/client will follow to achieve these goals.
+	
