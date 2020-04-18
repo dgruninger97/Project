@@ -351,7 +351,11 @@ Time Spent:
 
 ### 1. Which Use Cases did the notebook's designs address? In short: how did it address them?
 
-Design 1:
+Design 1: This document addressed all of the use cases;  except for use case 2 and use case 5. Specifically, it attempted to address all the use cases at once by addressing the primary functionality in one iteration.
+The author ended up modifying both of their reference architectures, and by also instantiating a sequence diagram to go over the workflow
+of a user purchasing coffee, displaying what elements of the system would be respoonsible for what actions. Additionally, a domain model was instantiated in order
+to display what nouns would be involved in solving the primary functionality, including the use cases, of the system.This was able to handle UC1, UC3, and UC4. However,
+UC2 and UC5 still remained unaddressed.
 
 Design 2: The notebook here addressed all of the use cases for the system. It did so by first selecting a service application in the first iteration and instantiating several elements
 which were responsbile for achieving the use cases in the second iteration. The Client Element identified in iteration 2 could access the coffee machines and remotely check how
@@ -364,11 +368,7 @@ app, depending on the rules specified by the client.
 
 ### 2. Which Use Cases remain unaddressed by this notebook?
 
-Design 1: This document addressed all of the use cases; but it did so in a different fashion from Design 2. Specifically, it addressed only the primary
-functionality of the system. The author ended up modifying both of their reference architectures, and by also instantiating a sequence diagram to go over the workflow
-of a user purchasing coffee, displaying what elements of the system would be respoonsible for what actions. Additionally, a domain model was instantiated in order
-to display what nouns would be involved in solving the primary functionality, including the use cases, of the system. I should reiterate that all the use cases were handeled,
-although they were not explicity cited in the notebook.
+Design 1: UC2 & UC5 both remain unaddressed.
 
 Design 2: Although all of the use cases were properly addressed, I do have a couple comments. The author needs to fully spell out the first use case, and make
 sure that the users can select different sizes of coffee (small, medium, large). This use case was addressed, but could have been clarified. Also, I think it might be
