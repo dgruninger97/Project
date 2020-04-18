@@ -418,7 +418,8 @@ external sources used throughout the document for even more supporting informati
 
 ### 7. Did the notebook compare the pros/cons of possible ideas? 
 
-Design 1: 
+Design 1: Yes. Although not explicity stated, the author discussed both the pros and cons of each system in Step 7 of the ADD iteration1 (Analysis of current Design).
+However, there could hvae been more discussion after iteration 1; as it seemed to stop after that.
 
 Design 2: Although there was not a list-style comparison of the pros & cons of the system, the author certainly analyzed the pros and cons in the rationale
 when deciding the better of two candidate designs.
