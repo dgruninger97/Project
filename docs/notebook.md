@@ -398,7 +398,9 @@ server so that they could have something ready for when cell services go down.
 
 ### 5. What known Tactics from the back of our book did the notebook use to address the Quality Attribute Scenarios?
 
-Design 1: 
+Design 1: The author did use tactics to address QAS1, QAS3*, and QAS5; although they didn't explicity name them. For QAS1, the author suggested to create
+requirements for the system. For QAS3, the author suggested to store new device information in the management layer (*not sure if this is a tactic). For QAS5, the
+author suggested the machine take a multi-processing state by sending information to the management platform.
 
 Design 2: No tactics were used to address the Quality Attribute Scenarios in this design.
 
