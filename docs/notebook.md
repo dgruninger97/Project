@@ -390,7 +390,8 @@ by "increasing data capacity and speed up transfer rates", which helps dispense 
 
 ### 4. Which Quality Attribute Scenarios remain unaddressed by this notebook? 
 
-Design 1: 
+Design 1: There are no quality attribute scenarios that were unaddressed in the noetbook. It was very helpful that the author of this notebook explicity labeled
+the quality attribute scenarios, as it made it very easy to find and confirm. It would have been nice if the author did the same thing with the use cases.
 
 Design 2: QAS4 was not addressed here. In order to properly address this, it probably would make sense for the author to include an additional backup-designated
 server so that they could have something ready for when cell services go down.
