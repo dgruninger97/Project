@@ -478,3 +478,18 @@ Design 1:
 
 Design 2:
 ![Design 2 Sequence Diagram](images/Design2SeqDiagramM2.png)
+
+### Additional Preconditions
+
+Design 1: The precondition here is that the client and the user have successfully signed into the application.
+
+Design 2: There are no additional preconditions brought in by this design in order to function.
+
+### Postconditons
+
+Design 1: The postconditions were successfully satisfied by this design.
+
+Design 2: The postconditions were successfully satisfied by this design.
+
+## Rainy Day Test
+
