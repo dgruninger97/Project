@@ -441,7 +441,9 @@ Design 1: First, the user would need to open the application on their phone, and
 For the client, the process would be similar. They would first need to launch the application on their phone. They would then be able to select the coffee machine of
 interest and have access to inventory status of that particular machine.
 
-Design 2:
+Design 2: The user and client will first need to sign in to the mobile application so they are granted their respective access levels. From there, the user will
+be able to select the size and type of coffee that they want from the machine of their choice. For the client, they also need to only open the mobile
+application to check and see how much coffee is left as well.
 
 ### 2. What do you suppose are the Preconditions?
 
@@ -451,7 +453,9 @@ user will be able to order coffee on a machine they have access to provided that
 Since the design document did not mention time constraints, this could hypothetically occur at any point during the day; so long as the other preconditions I mentioned were
 satisfied.
 
-Design 2: 
+Design 2: I believe the preconditions here are that both the client and the user must have access to the CM2W mobile application on their phone, and be in a location
+with acceptable cell reception. They also need to be able to successfully sign in to the application to have their respective priveleges. Additionally, the coffee machine that the user wants to make coffee from must have sufficient ingredients and power to actually make the coffee
+of the user's choosing. This could happen at any time during the day; so as long as the preconditions above are satisfied, the workflow of the user ordering coffee should be able to be satisfied at any time.
 
 ### 3. What do you suppose the Postconditions are?
 
