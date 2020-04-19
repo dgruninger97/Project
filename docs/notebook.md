@@ -455,7 +455,7 @@ Design 2:
 
 ### 3. What do you suppose the Postconditions are?
 
-Design 1: I think that the postconditions here would be that the user has received their cup of coffee and that information has updated the system such that the
-client could check that information on the mobile app if they wanted to.
+Design 1: I think that the postconditions here would be that the user has received their ordered cup of coffee and that inventory information has updated the system such that the
+client could check how much coffee was left at that station on the mobile app if they wanted to.
 
 Design 2: 
