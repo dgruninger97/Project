@@ -435,9 +435,27 @@ Design 2: Yes. The notebook was well organized and neatly laid out.
 
 ## Sunny Day Test
 
-Design 1: 
+### 1. Write down the steps that you imagine the user/client will follow to achieve these goals.
+	
+Design 1: First, the user would need to open the application on their phone, and select the size and type of coffee that they wish to order.
+For the client, the process would be similar. They would first need to launch the application on their phone. They would then be able to select the coffee machine of
+interest and have access to inventory status of that particular machine.
+
+Design 2:
+
+### 2. What do you suppose are the Preconditions?
+
+Design 1: First of all, both the client and the user need to have access to their phones and the CM2W application on their phones. There also needs to be cell reception
+such that the coffee machine will be able to wirelessly communicate it's data back to the client and user. The user will not have access to the inventory data of the coffee machine, but the
+user will be able to order coffee on a machine they have access to provided that the coffee machine has the ingredients and power necessary the user's desired coffee.
+Since the design document did not mention time constraints, this could hypothetically occur at any point during the day; so long as the other preconditions I mentioned were
+satisfied.
 
 Design 2: 
 
-### 1. Write down the steps that you imagine the user/client will follow to achieve these goals.
-	
+### 3. What do you suppose the Postconditions are?
+
+Design 1: I think that the postconditions here would be that the user has received their cup of coffee and that information has updated the system such that the
+client could check that information on the mobile app if they wanted to.
+
+Design 2: 
