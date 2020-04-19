@@ -347,7 +347,7 @@ At this point, we have satisfied all of our drivers.
 
 ## Assessing Completeness
 
-Time Spent: 2.5 hours -- over 2 days
+Time Spent: 2.5 hours -- spread over 2 days
 
 ### 1. Which Use Cases did the notebook's designs address? In short: how did it address them?
 
@@ -435,6 +435,8 @@ Design 2: Yes. The notebook was well organized and neatly laid out.
 
 ## Sunny Day Test
 
+Time Spent: 3 hours -- spread over 2 days
+
 ### 1. Write down the steps that you imagine the user/client will follow to achieve these goals.
 	
 Design 1: First, the user would need to open the application on their phone, and select the size and type of coffee that they wish to order.
@@ -462,4 +464,5 @@ of the user's choosing. This could happen at any time during the day; so as long
 Design 1: I think that the postconditions here would be that the user has received their ordered cup of coffee and that inventory information has updated the system such that the
 client could check how much coffee was left at that station on the mobile app if they wanted to.
 
-Design 2: 
+Design 2: I believe the postconditions here would be that the user has ordered and recieved their coffee, and that information has beensent to the database for 
+the client to check and see how much coffee is left at that station. (very similar to design 1)
