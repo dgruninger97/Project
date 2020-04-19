@@ -468,3 +468,12 @@ Design 2: I believe the postconditions here would be that the user has ordered a
 the client to check and see how much coffee is left at that station. (very similar to design 1)
 
 ## Testing Each Design
+
+### Sequence Diagrams
+
+Design 1: 
+![Design 1 Sequence Diagram](images/Design1SeqDiagramM2.png)
+
+
+
+Design 2:
