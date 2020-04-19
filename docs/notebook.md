@@ -466,3 +466,5 @@ client could check how much coffee was left at that station on the mobile app if
 
 Design 2: I believe the postconditions here would be that the user has ordered and recieved their coffee, and that information has beensent to the database for 
 the client to check and see how much coffee is left at that station. (very similar to design 1)
+
+## Testing Each Design
