@@ -477,3 +477,4 @@ Design 1:
 
 
 Design 2:
+![Design 2 Sequence Diagram](images/Design2SeqDiagramM2.png)
