@@ -495,9 +495,13 @@ Design 2: The postconditions were successfully satisfied by this design.
 
 Design 1: Say that CM2W had a large update which would entailed many user interface changes along with some business logic changes regarding the machines connected
 in the system. This update will take at least an hour, but could take longer if the signal to the internet is strained or under heavy traffic. This notebook
-suggestst that controllers will need to check for updates less frequently, but when it does update, it will need to complete the update in less than 2 hours.
+suggestst that controllers will need to check for updates less frequently. However when it does update, it will need to complete the update in less than 2 hours.
 However, this design does not employ any tactics to address how to actually go about downloading the update in less than 2 hours. If the system started to download the update at the
 wrong time, say during another software update, the system would not be able download the update in less than 2 hours. This is because the system does not
-identify any tactics to address this aside from infrequently checking for updates. Therefore, the system is at risk of not satisfying QAS2.
+identify any tactics to address this aside from infrequently checking for updates. There is no actual plan for if this check occurs at the wrong time. Therefore, the system is at risk of not satisfying QAS2.
 
-Design 2: 
+Design 2: The notebook mentions that in the case where the system went offline, data would be logged, using C, to some offline controller memory storage.
+Lets imagine that we have been using the CM2W system for a while, and the offline memory of the system is nearing its peak. Unfortunately, while the memory nears its peak
+the system also goes offline. Although we can try to log additional information to memory, we would lose some data because we don't have any plan for when 
+memory is full. Hence, our system does not have any backups for offline memory when the servers goes down. This puts the system at risk of not completely satisfying
+QAS4.
