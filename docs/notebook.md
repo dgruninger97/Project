@@ -493,3 +493,11 @@ Design 2: The postconditions were successfully satisfied by this design.
 
 ## Rainy Day Test
 
+Design 1: Say that CM2W had a large update which would entailed many user interface changes along with some business logic changes regarding the machines connected
+in the system. This update will take at least an hour, but could take longer if the signal to the internet is strained or under heavy traffic. This notebook
+suggestst that controllers will need to check for updates less frequently, but when it does update, it will need to complete the update in less than 2 hours.
+However, this design does not employ any tactics to address how to actually go about downloading the update in less than 2 hours. If the system started to download the update at the
+wrong time, say during another software update, the system would not be able download the update in less than 2 hours. This is because the system does not
+identify any tactics to address this aside from infrequently checking for updates. Therefore, the system is at risk of not satisfying QAS2.
+
+Design 2: 
