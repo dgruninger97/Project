@@ -347,7 +347,7 @@ At this point, we have satisfied all of our drivers.
 
 ## Assessing Completeness
 
-Time Spent: 2.5 hours -- spread over 2 days
+Time Spent: 3.5 hours -- spread over 2 days
 
 ### 1. Which Use Cases did the notebook's designs address? In short: how did it address them?
 
