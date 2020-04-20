@@ -353,7 +353,7 @@ Time Spent: 3.5 hours -- spread over 2 days
 
 Design 1: This document addressed all of the use cases;  except for use case 2 and use case 5. Specifically, it attempted to address all the use cases at once by addressing the primary functionality in one iteration.
 The author ended up modifying both of their reference architectures, and by also instantiating a sequence diagram to go over the workflow
-of a user purchasing coffee, displaying what elements of the system would be respoonsible for what actions. Additionally, a domain model was instantiated in order
+of a user purchasing coffee, displaying what elements of the system would be respoonsible for what actions regarding the use cases. Additionally, a domain model was instantiated in order
 to display what nouns would be involved in solving the primary functionality, including the use cases, of the system.This was able to handle UC1, UC3, and UC4. However,
 UC2 and UC5 still remained unaddressed.
 
@@ -363,7 +363,7 @@ much coffee is left (UC2). The Client element also can make manual requests for 
 Additionally, the User element allows for users to be able to make coffee on machines (UC1).
 The Suplier Service element is responsible
 for taking requests from the supplier (UC4). The Client element also specifically mentions how it allows Admins to access data over the phone or through the
-app, depending on the rules specified by the client.
+app, depending on the rules specified by the client. Finally, the author included another section regarding the clients setting business rules (UC5).
 
 
 ### 2. Which Use Cases remain unaddressed by this notebook?
