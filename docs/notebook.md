@@ -505,3 +505,12 @@ Lets imagine that we have been using the CM2W system for a while, and the offlin
 the system also goes offline. Although we can try to log additional information to memory, we would lose some data because we don't have any plan for when 
 memory is full. Hence, our system does not have any backups for offline memory when the servers goes down. This puts the system at risk of not completely satisfying
 QAS4.
+
+## Conclusion
+
+### Which of the two notebooks has the better design?
+
+I would say that the second notebook is better. It offers more specifics on how it would actually go about addressing the drivers. Instead of generally addressing
+the primary funcionality, it explicity has sections that describe how each driver will be addressed, by name. Additionally, it provides tables uses domain specific
+naming in all of the domain models and sequence diagrams provided, unlike design 2. Finally, it provides more description on what the actual elements in the system's
+domain model are doing, along with more research to support design decision and instiation of elements.
