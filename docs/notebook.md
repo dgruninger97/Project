@@ -523,6 +523,8 @@ domain model are doing, along with more research to support design decision and 
 
 ## Reflection
 
+Time spent: 1 hour
+
 ### Was there anything missing from either of these notebooks that would have made your evaluation easier?
 
 Design 1: Use larger titles. Although the notebook was generally laid out well and easy to navigate through, having larger titles to denote ADD iterations
