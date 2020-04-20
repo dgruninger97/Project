@@ -469,6 +469,8 @@ the client to check and see how much coffee is left at that station. (very simil
 
 ## Testing Each Design
 
+Time Spent: 1.5 hours
+
 ### Sequence Diagrams
 
 Design 1: 
@@ -493,6 +495,8 @@ Design 2: The postconditions were successfully satisfied by this design.
 
 ## Rainy Day Test
 
+Time spent: 1 hour
+
 Design 1: Say that CM2W had a large update which would entailed many user interface changes along with some business logic changes regarding the machines connected
 in the system. This update will take at least an hour, but could take longer if the signal to the internet is strained or under heavy traffic. This notebook
 suggestst that controllers will need to check for updates less frequently. However when it does update, it will need to complete the update in less than 2 hours.
@@ -508,9 +512,30 @@ QAS4.
 
 ## Conclusion
 
+Time spent: 30 mins
+
 ### Which of the two notebooks has the better design?
 
 I would say that the second notebook is better. It offers more specifics on how it would actually go about addressing the drivers. Instead of generally addressing
 the primary funcionality, it explicity has sections that describe how each driver will be addressed, by name. Additionally, it provides tables uses domain specific
 naming in all of the domain models and sequence diagrams provided, unlike design 2. Finally, it provides more description on what the actual elements in the system's
 domain model are doing, along with more research to support design decision and instiation of elements.
+
+## Reflection
+
+### Was there anything missing from either of these notebooks that would have made your evaluation easier?
+
+Design 1: Use larger titles. Although the notebook was generally laid out well and easy to navigate through, having larger titles to denote ADD iterations
+and different steps within those iterations would have made the notebook more understandable.
+
+Design 2: Explicity state the drivers that they are addressing. This was especially true because not having the drivers named out often meant it took a lot
+of time to find out where specific drivers were being discussed.
+
+### 2. Now that you've done this exercise: was there anything that you wish *you* had in your notebook, but did not?
+
+I wish I would have used a sequence diagram instead of doing class diagrams. Class diagrams are too specific and aren't helpful in an architectural sense. I also
+wish I would have provided more specifics on how my designs could have handled rainy day scenarios. My design was certainly prone to errors; errors
+that could have been addressed had I done a better job explaining how my system could handle faults. Additionally, I think it would have been useful to include
+a few more topics to support design decisions; they could have made my design more sound and overall handle situations better. Finally, I wish I had provided more
+discussion on the pros and cons of my design decisions. I always gave supporting evidence for my design decisions, but I never discussed possible flaws; which would
+have been useful in the analysis for possible rainy day scenarios and adjusting properly to them.
