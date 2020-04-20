@@ -527,12 +527,13 @@ Time spent: 1 hour
 
 ### Was there anything missing from either of these notebooks that would have made your evaluation easier?
 
-Design 1: Use larger titles. Although the notebook was generally laid out well and easy to navigate through, having larger titles to denote ADD iterations
+Design 1: Explicity state the drivers that they are addressing. This was especially true because not having the drivers named out often meant it took a lot
+of time to find out where specific drivers were being discussed.
+
+Design 2: Use larger titles. Although the notebook was generally laid out well and easy to navigate through, having larger titles to denote ADD iterations
 and different steps within those iterations would have made the notebook more understandable. Also, spell out what use cases are being used. This would have made
 the system much easier to understand.
 
-Design 2: Explicity state the drivers that they are addressing. This was especially true because not having the drivers named out often meant it took a lot
-of time to find out where specific drivers were being discussed.
 
 ### 2. Now that you've done this exercise: was there anything that you wish *you* had in your notebook, but did not?
 
