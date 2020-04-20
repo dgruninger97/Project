@@ -361,7 +361,7 @@ Design 2: The notebook here addressed all of the use cases for the system. It di
 which were responsbile for achieving the use cases in the second iteration. The Client Element identified in iteration 2 could access the coffee machines and remotely check how
 much coffee is left (UC2). The Client element also can make manual requests for more inventory from the supplier regarding different machines (UC3)
 Additionally, the User element allows for users to be able to make coffee on machines (UC1).
-The Suplier Service element is responsible
+The Supplier Service element is responsible
 for taking requests from the supplier (UC4). The Client element also specifically mentions how it allows Admins to access data over the phone or through the
 app, depending on the rules specified by the client. Finally, the author included another section regarding the clients setting business rules (UC5).
 
@@ -393,8 +393,8 @@ by "increasing data capacity and speed up transfer rates", which helps dispense 
 Design 1: There are no quality attribute scenarios that were unaddressed in the noetbook. It was very helpful that the author of this notebook explicity labeled
 the quality attribute scenarios, as it made it very easy to find and confirm. It would have been nice if the author did the same thing with the use cases.
 
-Design 2: QAS4 was not addressed here. In order to properly address this, it probably would make sense for the author to include an additional backup-designated
-server so that they could have something ready for when cell services go down.
+Design 2: All quality attribute scenarios here were addressed. This was done by explicity listing the quality attribute and what design decisions would be taken
+in order to address them, during ADD iteration 1.
 
 ### 5. What known Tactics from the back of our book did the notebook use to address the Quality Attribute Scenarios?
 
@@ -497,11 +497,11 @@ Design 2: The postconditions were successfully satisfied by this design.
 
 Time spent: 1 hour
 
-Design 1: Say that CM2W had a large update which would entailed many user interface changes along with some business logic changes regarding the machines connected
-in the system. This update will take at least an hour, but could take longer if the signal to the internet is strained or under heavy traffic. This notebook
+Design 1: Say that CM2W had a large update which would entail many user interface changes along with some business logic changes regarding the machines connected
+in the system. This update will take at least an hour and a half, but could take longer if the signal to the internet is strained or under heavy traffic. This notebook
 suggestst that controllers will need to check for updates less frequently. However when it does update, it will need to complete the update in less than 2 hours.
 However, this design does not employ any tactics to address how to actually go about downloading the update in less than 2 hours. If the system started to download the update at the
-wrong time, say during another software update, the system would not be able download the update in less than 2 hours. This is because the system does not
+wrong time, say during another traffic heavy software update, the system would not be able download the update in less than 2 hours. This is because the system does not
 identify any tactics to address this aside from infrequently checking for updates. There is no actual plan for if this check occurs at the wrong time. Therefore, the system is at risk of not satisfying QAS2.
 
 Design 2: The notebook mentions that in the case where the system went offline, data would be logged, using C, to some offline controller memory storage.
@@ -517,8 +517,8 @@ Time spent: 30 mins
 ### Which of the two notebooks has the better design?
 
 I would say that the second notebook is better. It offers more specifics on how it would actually go about addressing the drivers. Instead of generally addressing
-the primary funcionality, it explicity has sections that describe how each driver will be addressed, by name. Additionally, it provides tables uses domain specific
-naming in all of the domain models and sequence diagrams provided, unlike design 2. Finally, it provides more description on what the actual elements in the system's
+the primary funcionality, it explicity has sections that describe how each driver will be addressed, by name. Additionally, it provides element description tables and uses domain specific
+naming in all of the domain models and sequence diagrams provided, unlike design 1. Finally, it provides more description on what the actual elements in the system's
 domain model are doing, along with more research to support design decision and instiation of elements.
 
 ## Reflection
@@ -528,7 +528,8 @@ Time spent: 1 hour
 ### Was there anything missing from either of these notebooks that would have made your evaluation easier?
 
 Design 1: Use larger titles. Although the notebook was generally laid out well and easy to navigate through, having larger titles to denote ADD iterations
-and different steps within those iterations would have made the notebook more understandable.
+and different steps within those iterations would have made the notebook more understandable. Also, spell out what use cases are being used. This would have made
+the system much easier to understand.
 
 Design 2: Explicity state the drivers that they are addressing. This was especially true because not having the drivers named out often meant it took a lot
 of time to find out where specific drivers were being discussed.
