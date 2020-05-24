@@ -324,7 +324,7 @@ from the previous iteration.
 |   Make SimpleCoffeeController a subclass of AdvancedCoffeeController                   |      This will allow us to put a dispenseCoffee function in AdvancedCoffeeController, signifying that the SimpleCoffeeController doesn't have it        |
 |   Use the Observer pattern for Machines                   |      This will allow machines to push their status to the CM2WManagementPlatform and not have the CM2WManagementPlatform constantly polling for their status -- to do this I will be adding a seperate class to act as the subsriber of our system        |
 |    In order for our system to have no application state, we will be storing application state data in the local cache seen to the right of the Domain layer                        |        We are doing this so we don't have any application state          |
-### Side Note
+
 
 
 ## Step 6: Sketch Views and Record Design Decisions
@@ -543,3 +543,162 @@ that could have been addressed had I done a better job explaining how my system 
 a few more topics to support design decisions; they could have made my design more sound and overall handle situations better. Finally, I wish I had provided more
 discussion on the pros and cons of my design decisions. I always gave supporting evidence for my design decisions, but I never discussed possible flaws; which would
 have been useful in the analysis for possible rainy day scenarios and adjusting properly to them.
+
+# Project Milestone 3
+
+## Date: 5/20/2020
+
+Sidenote: Github acted weird recently and some of the changes that I made did not get pushed up until 5/24/2020. However, I began the project on 5/20/2020, although it may
+seem as it was all done over the weekend.
+
+# ADD Iteration 1 - Presentation
+
+## Step 1: Review Inputs
+
+First, it is important to understand that one of the initial drivers regarding the APIs that will be used in the system is that they must have **no application state**.
+This essentially means that the **CM2W system** will not hold concrete data regarding the system. Actually having application state is typically done via what is known as HTTPApplication state,
+which is when a site uses nouns and other objects to represent the state of the system at any given time. Our system must **not** support this feature. Instead, we
+will be using our REST APIs to store system information. While going through the iteration of ADD for Presentation, we will consider this and make decisions that
+will allow our system to have no application state, and rather store data in REST APIs instead.
+
+Additionally, we have new modifiability drivers laid out in the document. These are the new inputs we must consider along with the previous sequence diagrams
+and domain models that have been constructed in previous iterations.
+
+## Step 2: Establish Iteration Goal by Selecting Drivers
+
+We have new **modifiability quality attribute scenarios** that we will be considering during this iteration goal. The requirements document had a good line that
+summarized the following modifiability requirements: **The system must support additional features as the coffee machines become more sophisticated.**
+Specifically, the following features must be considered
+
+### Modifiability
+	1. QAS1: The system must be able to indicate system failures and schedule routine maintenance.
+	2. QAS2: The system must include the ability to remotely configure the machine to produce coffee in different modes; such as economy and premium modes.
+	3. QAS3: The system should support other automated drink machines that are being developed, such as juicers, shake/malt, and smoothie/lassi machines that will support similar interfaces.
+	
+## Step 3: Choose One or More Elements of the System to Refine
+
+Because we will be modifying the **presentation layer** of our system, we will be make a sequence diagram and refine the presentation layer of our mobile
+application architecture. This will not only give us a better idea of how the CM2W system will be interacting with external actors, it will be us a better understanding
+of what new modules will be introduced on the architectural level in order to meet our system's requirements.
+
+Finally, I will be taking a deeper look into our REST API, and design a preliminary domain model for that. This is because our application must not have application
+state, and we must hold data in the REST API. In order to effectively do so, I will design our REST API to hold onto data that will be important for the CM2W
+system to properly function. However, since this is the iteration for the presentation layer of our system, I will only be constructing REST API objects that
+deal with the system's presentation modules.
+
+## Step 4: Choose One or More Design Concepts that Satisfy the Selected Drivers
+
+As mentioned in step 3, several modules of the system will be refined via several concepts, listed below.
+
+### Design Decision: Construct a REST API Domain Model and Only Considering Presentation Aspects
+
+Rationale: In order for the system to have no application state, our REST API must be in charge of holding relevant data regarding our system. I will begin
+constructing a REST API to do so, but only consider the presentation aspects that are important for storage; since this is the presentation ADD iteration. In future
+iterations, I anticipate that the REST API will have many more features and be given further responsibility, because we will need to consider it's role regarding
+data source and domain interactions. For now, I will simply use a facade to represent those two entities.
+
+External Research: http://blog.peterritchie.com/Mapping+a+Domain+Model+To+RESTful/
+
+### Design Decision: Design a Sequence Diagram to Address the Modifiability Quality Attribute Scenarios
+
+Rationale: Sequence diagrams gives us an understanding of how our system will be interacting with external actors. Introducing our REST API will certainly involve changes
+in the presentation layer, since that is where the user will be interacting with the system. Since I am also refining the REST API this module, it is cruical for the Sequence Diagram to adapt the changes made there.
+
+External Research: N/A
+
+### Design Decision: Refine the Mobile Application Architecture's Presentation Layer to Accurately Address RestAPI through the Adapter Pattern
+
+Rationale: Although this may seem superflouous, I believe it is critical to begin to anticipate where our **architecture** might actually change as a result of
+sequence diagram changes and API changes. Anticipating some of the changes will help us down the road when we adjust our overall architectures to meet the presentation
+needs of our drivers.
+
+External Research: https://www.appvelocity.ca/blog/guide-mobile-application-architecture
+
+## Step 5: Instantiate Architectural Elements, Allocate Responsibilities and Define Interfaces
+
+| Design Decision & Location| Rationale |
+| :---:                     |          :---: |
+| Construct a Preliminary Sketch of our REST API | Again, we want to store our objects of the system to allow for no application state, constructing an initial model of the REST API will help us understand its responsibilities|
+| Make a sequence diagram to correspond to the changes that have been made in the new REST API| It is crucial to consider it's effect of integrating our REST API when interacting within our overall system, and how it will effect system interactions|
+| Introduce a more comprehensive view of the presentation layer of the Mobile Application Architecture | This is being done because we need to anticipate the changes to our mobile architectures by introducing this new API |
+
+## Step 6: Sketch Views and Record Design Decisions
+
+### REST API Module
+
+![Mod View](images/RESTAPIPresentation.png)
+
+### Rich Interent Application Architecture -- Presentation Layer
+
+![Mod View](images/MobileAppPresentationRESTAPI.png)
+
+### Sequence Diagram
+
+![Mod View](images/RestSequenceDiagram.png)
+
+## Step 7: Perform Analysis of Current Design and Review Iteration Gaol and Achievement of Design Purpose
+
+| Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
+| :---     | :---                |     :---:      |          ---: |
+|          |                        |   QAS1        |      N/A                     | 
+| QAS2         |                        |          |  Gave the Machine class within the RestAPI wrapper, which serves as an adapter and gives CM2W the ability to store the mode of the current machine. This logic was also considered in the sequence diagram; the mode was passed into the call to the controller regarding what mode the machine should run in    |
+|     | QAS3               |          | Although this is not completely addressed, I gave the RestAPI the ability to store drinks. There will likely be different drinks in the future, so that drink object will serve as an interface for future drinks  |
+
+# ADD Iteration 2 - Domain
+
+## Step 1: Review Inputs
+
+We now have a sequence diagram, module view of our Rest API, and a refined presentation layer to our Mobile Application Architecture. However, we still have not
+address all of the quality attribute scenarios that were laid our to us in the requirements document. We still need to address QAS1 and QAS3 (further). This
+iteration will focus on address the domain-related issues regarding our quality attribute scenarios.
+
+## Step 2: Establish Iteration Goal by Selecting Drivers
+
+Since we have not fully addressed QAS3, and not at all addressed QAS1, those will be our drivers for this iteration. I am listing them below again for reference:
+
+	1. QAS1: The system must be able to indicate system failures and schedule routine maintenance.
+	2. QAS3: The system should support other automated drink machines that are being developed, such as juicers, shake/malt, and smoothie/lassi machines that will support similar interfaces.
+	
+Again, these quality attributes scenarios are regarding **modifiability.**
+
+## Step 3: Choose One or More Elements of the System to Refine
+
+Since this iteration is primarily concerned with the domain and internal design of our system, I will be modifying the domain section of the mobile application
+architecture and the Rest API's current module view. Specifically, it will have changes made to the current **Rest API Domain Facade**. 
+
+## Step 4: Choose One or More Design Concepts that Satisfy the Selected Drivers
+
+### Design Concept: Use the Abstract Factory pattern to represent different Drink Objects in the Mobile Application Architecture
+
+Since we will need to support different drinks in the future that are being constructed from different drink machines, this gives us a perfect opportunity
+to implement the **Abstract Factory Pattern**. The Abstract Factory definition is to **create families of objects without specifying their concrete classes.**
+This works out well because we may not know what kind of drink a user may want at any given time. By using the Abstract Factory pattern, we can have factories
+that construct different types through different factories.
+
+External Research: https://medium.com/@hitherejoe/design-patterns-abstract-factory-39a22985bdbf
+
+### Design Concept: Construct methods using the Factory Method Pattern in the Rest API domain layer to handle failures and maintenance
+
+I am deciding to use the **factory method pattern** here because failures and maintenance in systems is very dynamic and diverse. Systems will typically know what kind of failures occur in general,
+but they do not know **when** they will occur. This to me sounded like a place where the factory method pattern could be of use to us. Systems can construct different
+types of failure objects that will be differently interpreted and responded to.
+
+External Research: https://dzone.com/articles/java-the-factory-pattern
+
+## Step 5: Instantiate Arcitectural Elements, Allocate Responsibilities and Define Interfaces
+
+| Design Decision & Location| Rationale |
+| :---:                     |          :---: |
+| Use the Abstract Factory Pattern for Drink Objects in the Mobile Application Architecture's Domain Model | One of our drivers (QAS3) is regarding drink machines that are being created. These machines will produced different types of drinks, and using the abstract factory pattern can prepare us for those new drinks to be constructed by different "machines".              |
+| Use the Factory Method pattern for Maintenance and Failure handling within the REST API Module View | Since we will be unsure about the type of failure and corresponding maintenance to perform at any given time, the factory method pattern will allow us to dynamically construct objects to address these issues when necessary               |
+
+## Step 6: Sketch Views and Record Design Decisions
+
+#### Side Note
+
+I didn't include the methods inside of the Mobile Application Architecture's domain layer because it would have drawn away from the design decision I was making.
+
+### Mobile Application Architecture Domain Model
+
+![Mod View](images/MobileAppPresentationRESTAPI2.png)
+
