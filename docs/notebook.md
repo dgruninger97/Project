@@ -683,7 +683,11 @@ I am deciding to use the **factory method pattern** here because failures and ma
 but they do not know **when** they will occur. This to me sounded like a place where the factory method pattern could be of use to us. Systems can construct different
 types of failure objects that will be differently interpreted and responded to.
 
-External Research: https://dzone.com/articles/java-the-factory-pattern
+The reason this is being done in the REST API has to do with logging failures. After doing some research, it seems that keeping track of errors that arise
+and system steps taken to address those errors will greatly help the system in the long run. By logging the errors through the REST API, we will have access to the error
+log, which can provide us details on why the system did crash.
+
+External Research: https://dzone.com/articles/java-the-factory-pattern , https://softwareengineering.stackexchange.com/questions/266290/how-should-i-handle-logger-failures
 
 ## Step 5: Instantiate Arcitectural Elements, Allocate Responsibilities and Define Interfaces
 
@@ -702,3 +706,12 @@ I didn't include the methods inside of the Mobile Application Architecture's dom
 
 ![Mod View](images/MobileAppPresentationRESTAPI2.png)
 
+As you can see from above, the Abstract Factory pattern is utilized with the MachineFactory and Drink interfaces. If more types of drinks or drink machines come along
+in the future, we will be able to handle that.
+
+### Rest API Module
+
+![Mod View](images/RESTAPIDomain.png)
+
+Here, the Failure interface is constructed by both the FailureAFactory and the FailureBFactory. Additionally, the Failure class constructs an instance of the
+MaintenanceMeasure class. This class holds whatever maintenance is necessary to recover from the particular failure that occured.
