@@ -720,3 +720,44 @@ MaintenanceMeasure class. This class holds whatever maintenance is necessary to 
 | :---     | :---                |     :---:      |          ---: |
 |           |   QAS1                  |                | Added a failure interface to the REST API Domain Module via the Factory Method Pattern. I still think it is important for the failure data to be logged, however that will go in the data source layer of the project                | 
 |  QAS3         |                     |                | Used an Abstract Factory within the Mobile Application Archictecture's Domain Model to handle different drinks being constructed by new drink factories. Any new types of drinks will be represented by implementing the Drink interface and be constructed by a MachineFactory.                | 
+
+# ADD Iteration 3 - Data Source
+
+## Step 1: Review Inputs
+
+Again, we have our sequence diagram, our more developed domain model within our mobile application architecture, and the REST API module, which now has both module
+views for both the domain layer and presentation layer. We have one further QAS, QAS1, that we need to consider during this iteration.
+
+## Step 2: Establish Iteration Goal by Selecting Drivers
+
+Again, we are working exclusively with **modifiability** here. For this iteration, I will be focusing on QAS1. It is listed below for reference:
+
+	1. QAS1: The system must be able to indicate system failures and schedule routine maintenance.
+
+## Step 3: Choose One or More Elements of the System to Refine
+
+Here, I will be refining both the Sequence diagram, as well as the REST API data source layer. Modifying the sequence diagram will allow us to get a better
+of how our REST API will handle storing data in data layers and it's overall place within the workflow of our system. Additionally, by modifying the REST API data source layer, this will allow us to understand what modules
+are needed in the REST API to handle interactions with our SQL and NoSQL databases.
+
+## Step 4: Choose One or More Design Concepts that Satisfy the Selected Drivers
+
+### Design Concept: Modify our REST API's Data Source Facade by using the Observer Pattern to Notify Databases Access Points that the Data has Changed
+
+So I think it would be a good idea to have database access points in the REST API data source layer which can tell when a maintenance measure has
+been taken, and in response, notify our database access points. From there, we can send the failure associated with the maintenance measure to the database
+to be logged.
+
+External Research: https://stackoverflow.com/questions/14633808/the-observer-pattern-further-considerations-and-generalised-c-implementation
+
+### Design Concept: Adjust the Sequence Diagram to reflect changes made in the REST API to handle failure interactions with the database
+
+Here, we will need to consider the workflow of when an error occurs which causes a failure within the system. We will need to trace how the REST API is able
+to catch that error, using the modules that will be created within the REST API data source layer, and how it will then call down to the databases so that
+they will be able to properly log the information needed. Therefore clients will be able to see this information later and get a better understanding of what failure
+occured and which mainenance measure was taken in response.
+
+## Step 5: Instantiate Arcitectural Elements, Allocate Responsibilities and Define Interfaces
+
+| Design Decision & Location| Rationale |
+| :---:                     |          :---: |
