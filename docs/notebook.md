@@ -865,10 +865,10 @@ we will need to do is change that wrapper so it uses the third party API that we
 
 # Identify Possible Weaknesses in the Design
 
-I think I have a strong understanding of the core modules within the system. This includes the objects in the module view, such as coffee, smoothie, MachineFactory, etc.
+I think I have a strong understanding of the core modules within the system. This includes the mobile app domain model, such as coffee, smoothie, MachineFactory, etc.
 However, the designs which I produced are relatively high level, as were the requirements. I believe my greatness weakness with the design is understanding the granularity
 of the software that I will need to produce. For example, I have no idea what the actual GUI will look like. Therefore, I really am unsure about what **specifically** will go
 into the presentation layer of the system. I can make predicitons and high level diagrams based off of specifications, but I really don't know what the client wants unless I do
 further digging on the needs, features, and requirements of the system.
 Overall, I feel as if I have a good understanding of the patterns used and the modules involved with them, but regarding some of the other modules that I have introduced which are somewhat more vague, I will
-need to brush up on those and make sure that each class gets a single responsibility.
+need to brush up on those.
