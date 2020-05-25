@@ -837,4 +837,37 @@ and access data in the SQL database and the NoSQL database.
 
 ### Rainy Day Tests
 
-One of the reasons I believe my design does a good job is because I am able to properly handle cases where the system may encounter failures.
+One of the reasons I believe my design does a good job is because I am able to properly handle cases where the system may encounter failures. I specifically delegates
+two patterns to handle errors within my REST API; the obsever pattern to notify the database access points and the abstract factory pattern to help deal with constructing
+failures and their respective mainetenance methods that need to occur as a result. However, this only consideres errors within the REST API of the system. Let's assume that
+there are issues with the connecting to a viable internet service while a user is trying to purchase a drink. 
+Unfortunately, my system does not have any real way of handling internet service connection issues and will more than likely not be able to signal the proper machine to make coffee. Additionally, if either of the SQL or NoSQL databases are down
+while a user makes an order, that data will not be recorded within those databases.
+
+# Future Changes
+
+## Based on the requirements and problem domain, what are likely future changes to the system? How would your design withstand them?
+
+I think the biggest change in the system is the introduction of new drinks and drink machines into our system. Luckily, I applied the **Abstract Factory** pattern
+to handle this case. The domain model within the Mobile Application Architecture handles these cases by using an interface called **Machine Factory** and an interface
+called **Drink**. As reference I have posted the **section of the abstract factory** within the domain model for the mobile application below:
+
+![Mod View](images/AbstractFactory.png)
+
+The purpose of the Drink interface is fairly obvious; drinks in the CM2W application will be represented by implementing this Drink interface. When new drinks come
+along, they will be represented by this interface. 
+The Machine factory is used to handle cases where new drinks might be able to be made through different machines. For example, if a machine can now only produce a
+certain group of Drinks, the MachineFactory interface implementation will handle that construction.
+
+Another likely change could be the REST API, which is why I made a REST API wrapper. That way, if we ever decide that we don't want to use the REST API, all that
+we will need to do is change that wrapper so it uses the third party API that we are instered in, instead of the REST API.
+
+# Identify Possible Weaknesses in the Design
+
+I think I have a strong understanding of the core modules within the system. This includes the objects in the module view, such as coffee, smoothie, MachineFactory, etc.
+However, the designs which I produced are relatively high level, as were the requirements. I believe my greatness weakness with the design is understanding the granularity
+of the software that I will need to produce. For example, I have no idea what the actual GUI will look like. Therefore, I really am unsure about what **specifically** will go
+into the presentation layer of the system. I can make predicitons and high level diagrams based off of specifications, but I really don't know what the client wants unless I do
+further digging on the needs, features, and requirements of the system.
+Overall, I feel as if I have a good understanding of the patterns used and the modules involved with them, but regarding some of the other modules that I have introduced which are somewhat more vague, I will
+need to brush up on those and make sure that each class gets a single responsibility.
