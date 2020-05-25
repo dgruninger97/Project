@@ -705,6 +705,7 @@ External Research: https://dzone.com/articles/java-the-factory-pattern , https:/
 #### Side Note
 
 I didn't include the methods inside of the Mobile Application Architecture's domain layer because it would have drawn away from the design decision I was making.
+It also would have been a headache to look at because of its size.
 
 ### Mobile Application Architecture Domain Model
 
