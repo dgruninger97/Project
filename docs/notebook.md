@@ -715,3 +715,8 @@ in the future, we will be able to handle that.
 
 Here, the Failure interface is constructed by both the FailureAFactory and the FailureBFactory. Additionally, the Failure class constructs an instance of the
 MaintenanceMeasure class. This class holds whatever maintenance is necessary to recover from the particular failure that occured.
+
+| Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
+| :---     | :---                |     :---:      |          ---: |
+|           |   QAS1                  |                | Added a failure interface to the REST API Domain Module via the Factory Method Pattern. I still think it is important for the failure data to be logged, however that will go in the data source layer of the project                | 
+|  QAS3         |                     |                | Used an Abstract Factory within the Mobile Application Archictecture's Domain Model to handle different drinks being constructed by new drink factories. Any new types of drinks will be represented by implementing the Drink interface and be constructed by a MachineFactory.                | 
