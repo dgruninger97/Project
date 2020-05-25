@@ -658,8 +658,8 @@ Time spent: 4 hours
 ## Step 1: Review Inputs
 
 We now have a sequence diagram, module view of our Rest API, and a refined presentation layer to our Mobile Application Architecture. However, we still have not
-address all of the quality attribute scenarios that were laid our to us in the requirements document. We still need to address QAS1 and QAS3 (further). This
-iteration will focus on address the domain-related issues regarding our quality attribute scenarios.
+addressed all of the quality attribute scenarios that were laid our to us in the requirements document. We still need to address QAS1 and QAS3 (further). This
+iteration will focus on addressing the domain-related issues regarding our quality attribute scenarios.
 
 ## Step 2: Establish Iteration Goal by Selecting Drivers
 
@@ -688,13 +688,13 @@ External Research: https://medium.com/@hitherejoe/design-patterns-abstract-facto
 
 ### Design Concept: Construct methods using the Factory Method Pattern in the Rest API domain layer to handle failures and maintenance
 
-I am deciding to use the **factory method pattern** here because failures and maintenance in systems is very dynamic and diverse. Systems will typically know what kind of failures occur in general,
+I am deciding to use the **factory method pattern** here because failures and maintenance in systems are very dynamic and diverse. Systems will typically know what kind of failures occur in general,
 but they do not know **when** they will occur. This to me sounded like a place where the factory method pattern could be of use to us. Systems can construct different
 types of failure objects that will be differently interpreted and responded to.
 
 The reason this is being done in the REST API has to do with logging failures. After doing some research, it seems that keeping track of errors that arise
 and system steps taken to address those errors will greatly help the system in the long run. By logging the errors through the REST API, we will have access to the error
-log, which can provide us details on why the system did crash.
+log, which can provide the client details on why the system did crash.
 
 External Research: https://dzone.com/articles/java-the-factory-pattern , https://softwareengineering.stackexchange.com/questions/266290/how-should-i-handle-logger-failures
 
@@ -739,8 +739,8 @@ Time Spent: 3 hours
 
 ## Step 1: Review Inputs
 
-Again, we have our sequence diagram, our more developed domain model within our mobile application architecture, and the REST API module, which now has both module
-views for both the domain layer and presentation layer. We have one further QAS, QAS1, that we need to consider during this iteration.
+Again, we have our sequence diagram, our more developed domain model within our mobile application architecture, and the REST API module; which now has both module
+views for both the domain layer and presentation layer. We have one further QAS,QAS1, that we need to consider during this iteration.
 
 ## Step 2: Establish Iteration Goal by Selecting Drivers
 
