@@ -553,6 +553,8 @@ seem as it was all done over the weekend.
 
 # ADD Iteration 1 - Presentation
 
+Time spent: 3 hours
+
 ## Step 1: Review Inputs
 
 First, it is important to understand that one of the initial drivers regarding the APIs that will be used in the system is that they must have **no application state**.
@@ -646,6 +648,8 @@ External Research: https://www.appvelocity.ca/blog/guide-mobile-application-arch
 
 # ADD Iteration 2 - Domain
 
+Time spent: 4 hours
+
 ## Step 1: Review Inputs
 
 We now have a sequence diagram, module view of our Rest API, and a refined presentation layer to our Mobile Application Architecture. However, we still have not
@@ -723,6 +727,8 @@ MaintenanceMeasure class. This class holds whatever maintenance is necessary to 
 
 # ADD Iteration 3 - Data Source
 
+Time Spent: 3 hours
+
 ## Step 1: Review Inputs
 
 Again, we have our sequence diagram, our more developed domain model within our mobile application architecture, and the REST API module, which now has both module
@@ -761,3 +767,9 @@ occured and which mainenance measure was taken in response.
 
 | Design Decision & Location| Rationale |
 | :---:                     |          :---: |
+| Use the observer pattern in the REST API data source layer to notify database access points when system failures occurs | This will allow clients to see failures in the CM2W system by looking at the SQL and NoSQL databases that were provided in the system                   |
+| Update the Sequence diagram to refect the change made in the REST API data source layer when an error occurs | The process will help us understand how our system will interact with other important modules during one of these failures               |
+
+## Step 6: Sketch Views and Record Design Decisions
+
+### REST API, Now Fully Developed
