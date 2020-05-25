@@ -773,3 +773,15 @@ occured and which mainenance measure was taken in response.
 ## Step 6: Sketch Views and Record Design Decisions
 
 ### REST API, Now Fully Developed
+
+![Mod View](images/RESTAPIData.png)
+
+Note how the different concrete failures of the system have a reference to the FailureNotifier. This allows those failures to directly notify the FailureObservers
+within the Data Source Layer.
+
+### Sequence Diagram, Failure Case
+
+![Mod View](images/RESTAPISequenceFailure.png)
+
+Again, it is important to emphasize that this workflow is considering the case where a failure occurs in the REST API. There are obviously other issues that
+could arise, but this sequence diagram goes over how errors might be logged in the REST API, and how the client might view those errors later.
