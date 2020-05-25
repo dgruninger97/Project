@@ -717,6 +717,8 @@ in the future, we will be able to handle that.
 
 ![Mod View](images/RESTAPIDomain.png)
 
+## Step 7: Perform Analysis of Current Design and Review Iteration Gaol and Achievement of Design Purpose
+
 Here, the Failure interface is constructed by both the FailureAFactory and the FailureBFactory. Additionally, the Failure class constructs an instance of the
 MaintenanceMeasure class. This class holds whatever maintenance is necessary to recover from the particular failure that occured.
 
@@ -750,13 +752,13 @@ are needed in the REST API to handle interactions with our SQL and NoSQL databas
 
 ### Design Concept: Modify our REST API's Data Source Facade by using the Observer Pattern to Notify Databases Access Points that the Data has Changed
 
-So I think it would be a good idea to have database access points in the REST API data source layer which can tell when a maintenance measure has
-been taken, and in response, notify our database access points. From there, we can send the failure associated with the maintenance measure to the database
+So I think it would be a good idea to have database access points in the REST API data source layer which can tell when a failure has
+occured, the system is able to properly notify our database access points. From there, we can send the failure associated with the maintenance measure to the database
 to be logged.
 
 External Research: https://stackoverflow.com/questions/14633808/the-observer-pattern-further-considerations-and-generalised-c-implementation
 
-### Design Concept: Adjust the Sequence Diagram to reflect changes made in the REST API to handle failure interactions with the database
+### Design Concept: Adjust the Sequence Diagram to reflect changes made in the REST API to handle failure interactions by sending them to the database
 
 Here, we will need to consider the workflow of when an error occurs which causes a failure within the system. We will need to trace how the REST API is able
 to catch that error, using the modules that will be created within the REST API data source layer, and how it will then call down to the databases so that
@@ -777,11 +779,21 @@ occured and which mainenance measure was taken in response.
 ![Mod View](images/RESTAPIData.png)
 
 Note how the different concrete failures of the system have a reference to the FailureNotifier. This allows those failures to directly notify the FailureObservers
-within the Data Source Layer.
+within the Data Source Layer. One more thing I want to note about this module view of our REST API is that the maintenanceMeasure classes will be called as a result
+of particular failures within the system. As you can see, the Failure interface has a dependency with the MaintenanceMeasure interface, signifying that a failure will
+trigger the appropriate maintenanceMeasure class.
 
 ### Sequence Diagram, Failure Case
 
 ![Mod View](images/RESTAPISequenceFailure.png)
 
 Again, it is important to emphasize that this workflow is considering the case where a failure occurs in the REST API. There are obviously other issues that
-could arise, but this sequence diagram goes over how errors might be logged in the REST API, and how the client might view those errors later.
+could arise, but this sequence diagram goes over how errors might be logged in the REST API, and how the client might view those errors later. I have abstracted
+out the REST API Modules so we can understand how the whole system would react in this workflow.
+
+## Step 7: Perform Analysis of Current Design and Review Iteration Gaol and Achievement of Design Purpose
+
+| Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
+| :---     | :---                |     :---:      |          ---: |
+|  QAS1        |                      |             |   Implemented the observer pattern to notify database acces points. This will allow clients to see what failures and measuredMaintence has taken place in the system. Also reflected the sequence diagram to show how the system stores these failures with both SQL and NoSQL databases.                 |
+
