@@ -754,9 +754,12 @@ are needed in the REST API to handle interactions with our SQL and NoSQL databas
 
 So I think it would be a good idea to have database access points in the REST API data source layer which can tell when a failure has
 occured, the system is able to properly notify our database access points. From there, we can send the failure associated with the maintenance measure to the database
-to be logged.
+to be logged. These database access points will sort of function like **data mappers**. They will take in information regarding failures or maintenance, and then
+convert that data into SQL or NoSQL queries that can be processed and stored in both the SQL and NoSQL database. However, I will not name my Modules "DataMapper"
+because here they will also be funcitoning as **concrete observers**, regarding their use in the **Observer Pattern**.
 
 External Research: https://stackoverflow.com/questions/14633808/the-observer-pattern-further-considerations-and-generalised-c-implementation
+					https://javatutorial.net/java-observer-design-pattern-example
 
 ### Design Concept: Adjust the Sequence Diagram to reflect changes made in the REST API to handle failure interactions by sending them to the database
 
@@ -764,6 +767,8 @@ Here, we will need to consider the workflow of when an error occurs which causes
 to catch that error, using the modules that will be created within the REST API data source layer, and how it will then call down to the databases so that
 they will be able to properly log the information needed. Therefore clients will be able to see this information later and get a better understanding of what failure
 occured and which mainenance measure was taken in response.
+
+External Research: N/A
 
 ## Step 5: Instantiate Arcitectural Elements, Allocate Responsibilities and Define Interfaces
 
@@ -797,3 +802,35 @@ out the REST API Modules so we can understand how the whole system would react i
 | :---     | :---                |     :---:      |          ---: |
 |  QAS1        |                      |             |   Implemented the observer pattern to notify database acces points. This will allow clients to see what failures and measuredMaintence has taken place in the system. Also reflected the sequence diagram to show how the system stores these failures with both SQL and NoSQL databases.                 |
 
+We have now satified **all of the drivers given to us.** All of the QAS have been fully addressed and completed using explicit design concepts. 
+
+# Testing
+
+## To what extent does the system satisfy the Initial Drivers? How can you prove that?
+
+I believe my system completely satisfied the initial drivers. There are a few way I can prove it. Testing is a big one, however. Even if we are unsure about the future drink machines or drinks
+that will be arriving into our system, we can use **mocking** so that can we simulate their behavior and not have to wait for these drinks to come out. If we already
+have some of these drinks, we can try to add them into our system to ensure that our design can allow for them to arrive in the system **without changing any code**. Indeed, if
+we must change code then our design certainly could have been better, however there is no way of telling unless we mock the behavior of the elements we want to integrate
+into our system or if we actually implement them into our system.
+Another way you could help prove your inital drivers are correct is to revisit the design concepts that were made and ensure that they were the best decision for solving
+the problem at hand. This is where code reviews, and working in groups with other people comes in handy.
+
+## Walk through your M2 test cases again, but this time with your Detailed Design. How do the pieces of your Detailed Design work together to respond to the system’s inputs?
+
+One of the good things about developing the sequence diagrams that I did was that I have a good understanding of how the different pieces of the system work and
+interact with each other. I will analyze both the Rainy and Sunny day cases for these tests, and go over how different modules interact and respond to differing circumstances.
+The sunny day tests will look similar to the first sequence diagram in this milestone, while the rainy day tetss will look similar to the second.
+
+### Sunny Day Tests
+
+As mentioned in the first milestone, our CM2W platform will be developed with an Mobile Application Architecture for it's underlying structure. So for the user, their 
+first action to kick off the sunny day workflow will be to launch the CM2W mobile application. They will then make several calls to the presentation layer of the application
+in order to purchase a drink of their choosing. Then, the presentation layer will call down to the PointOfSalesApplication, which is standard, so there will be no deviation
+on iOS or Android devices. Our PointOfSales App will then call the machine that the user ordered the drink on, and the machine will then have the information
+needed in order to start making the drink of the user's choosing. Then the PointOfSales App will make a call to the REST API wrapper in order to store the data
+in the REST API and in the database. (The REST API wrapper is used because if we decide that we want to use another API in the future, we will be prepared and will
+only have to change our wrapper.) The REST API wrapper both stored needed data in both SQL and NoSQL datbases, therefor sort of acting like a data mapper. However, it
+also functions as an object view of the machine and the coffee, and allows cruicial information for CM2W to be stored, **without using application sttae.** The client
+then has the ability to check statuses of orders by making calls on the same application (with more priveleges). These calls will also go through the REST API wrapper
+and access data in the SQL database and the NoSQL database.
