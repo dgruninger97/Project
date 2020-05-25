@@ -634,9 +634,14 @@ External Research: https://www.appvelocity.ca/blog/guide-mobile-application-arch
 
 ![Mod View](images/MobileAppPresentationRESTAPI.png)
 
+The most important feature with this view of the presentation layer is the RESTAPIWrapper. This will be used for communication with the REST API.
+
 ### Sequence Diagram
 
 ![Mod View](images/RestSequenceDiagram.png)
+
+Notice how our application is not directly interacting with the REST API module. Instead, we are interacting with the **RESTAPI Wrapper**, which handles
+calls to the Rest API.
 
 ## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
