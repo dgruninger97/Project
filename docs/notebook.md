@@ -610,7 +610,7 @@ External Research: N/A
 
 ### Design Decision: Refine the Mobile Application Architecture's Presentation Layer to Accurately Address RestAPI through the Adapter Pattern
 
-Rationale: Although this may seem superflouous, I believe it is critical to begin to anticipate where our **architecture** might actually change as a result of
+Rationale: Although this may seem superfluous, I believe it is critical to begin to anticipate where our **architecture** might actually change as a result of
 sequence diagram changes and API changes. Anticipating some of the changes will help us down the road when we adjust our overall architectures to meet the presentation
 needs of our drivers.
 
@@ -630,7 +630,7 @@ External Research: https://www.appvelocity.ca/blog/guide-mobile-application-arch
 
 ![Mod View](images/RESTAPIPresentation.png)
 
-### Rich Interent Application Architecture -- Presentation Layer
+### Mobile Application Architecture -- Presentation Layer
 
 ![Mod View](images/MobileAppPresentationRESTAPI.png)
 
@@ -638,7 +638,7 @@ External Research: https://www.appvelocity.ca/blog/guide-mobile-application-arch
 
 ![Mod View](images/RestSequenceDiagram.png)
 
-## Step 7: Perform Analysis of Current Design and Review Iteration Gaol and Achievement of Design Purpose
+## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
@@ -693,7 +693,7 @@ log, which can provide us details on why the system did crash.
 
 External Research: https://dzone.com/articles/java-the-factory-pattern , https://softwareengineering.stackexchange.com/questions/266290/how-should-i-handle-logger-failures
 
-## Step 5: Instantiate Arcitectural Elements, Allocate Responsibilities and Define Interfaces
+## Step 5: Instantiate Architectural Elements, Allocate Responsibilities and Define Interfaces
 
 | Design Decision & Location| Rationale |
 | :---:                     |          :---: |
@@ -717,10 +717,10 @@ in the future, we will be able to handle that.
 
 ![Mod View](images/RESTAPIDomain.png)
 
-## Step 7: Perform Analysis of Current Design and Review Iteration Gaol and Achievement of Design Purpose
+## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
 Here, the Failure interface is constructed by both the FailureAFactory and the FailureBFactory. Additionally, the Failure class constructs an instance of the
-MaintenanceMeasure class. This class holds whatever maintenance is necessary to recover from the particular failure that occured.
+MaintenanceMeasure class. This class holds whatever maintenance is necessary to recover from the particular failure that occurred.
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
@@ -753,7 +753,7 @@ are needed in the REST API to handle interactions with our SQL and NoSQL databas
 ### Design Concept: Modify our REST API's Data Source Facade by using the Observer Pattern to Notify Databases Access Points that the Data has Changed
 
 So I think it would be a good idea to have database access points in the REST API data source layer which can tell when a failure has
-occured, the system is able to properly notify our database access points. From there, we can send the failure associated with the maintenance measure to the database
+occurred, the system is able to properly notify our database access points. From there, we can send the failure associated with the maintenance measure to the database
 to be logged. These database access points will sort of function like **data mappers**. They will take in information regarding failures or maintenance, and then
 convert that data into SQL or NoSQL queries that can be processed and stored in both the SQL and NoSQL database. However, I will not name my Modules "DataMapper"
 because here they will also be funcitoning as **concrete observers**, regarding their use in the **Observer Pattern**.
@@ -766,7 +766,7 @@ External Research: https://stackoverflow.com/questions/14633808/the-observer-pat
 Here, we will need to consider the workflow of when an error occurs which causes a failure within the system. We will need to trace how the REST API is able
 to catch that error, using the modules that will be created within the REST API data source layer, and how it will then call down to the databases so that
 they will be able to properly log the information needed. Therefore clients will be able to see this information later and get a better understanding of what failure
-occured and which mainenance measure was taken in response.
+occurred and which maitenance measure was taken in response.
 
 External Research: N/A
 
@@ -775,7 +775,7 @@ External Research: N/A
 | Design Decision & Location| Rationale |
 | :---:                     |          :---: |
 | Use the observer pattern in the REST API data source layer to notify database access points when system failures occurs | This will allow clients to see failures in the CM2W system by looking at the SQL and NoSQL databases that were provided in the system                   |
-| Update the Sequence diagram to refect the change made in the REST API data source layer when an error occurs | The process will help us understand how our system will interact with other important modules during one of these failures               |
+| Update the Sequence diagram to reflect the change made in the REST API data source layer when an error occurs | The process will help us understand how our system will interact with other important modules during one of these failures               |
 
 ## Step 6: Sketch Views and Record Design Decisions
 
@@ -796,13 +796,13 @@ Again, it is important to emphasize that this workflow is considering the case w
 could arise, but this sequence diagram goes over how errors might be logged in the REST API, and how the client might view those errors later. I have abstracted
 out the REST API Modules so we can understand how the whole system would react in this workflow.
 
-## Step 7: Perform Analysis of Current Design and Review Iteration Gaol and Achievement of Design Purpose
+## Step 7: Perform Analysis of Current Design and Review Iteration Goal and Achievement of Design Purpose
 
 | Addressed| Partially Addressed | Not Addressed  | Decisions Made during Iteration |
 | :---     | :---                |     :---:      |          ---: |
-|  QAS1        |                      |             |   Implemented the observer pattern to notify database acces points. This will allow clients to see what failures and measuredMaintence has taken place in the system. Also reflected the sequence diagram to show how the system stores these failures with both SQL and NoSQL databases.                 |
+|  QAS1        |                      |             |   Implemented the observer pattern to notify database access points. This will allow clients to see what failures and measuredMaintence has taken place in the system. Also reflected the sequence diagram to show how the system stores these failures with both SQL and NoSQL databases.                 |
 
-We have now satified **all of the drivers given to us.** All of the QAS have been fully addressed and completed using explicit design concepts. 
+We have now satisfied **all of the drivers given to us.** All of the QAS have been fully addressed and completed using explicit design concepts. 
 
 # Testing
 
@@ -813,14 +813,14 @@ that will be arriving into our system, we can use **mocking** so that can we sim
 have some of these drinks, we can try to add them into our system to ensure that our design can allow for them to arrive in the system **without changing any code**. Indeed, if
 we must change code then our design certainly could have been better, however there is no way of telling unless we mock the behavior of the elements we want to integrate
 into our system or if we actually implement them into our system.
-Another way you could help prove your inital drivers are correct is to revisit the design concepts that were made and ensure that they were the best decision for solving
+Another way you could help prove your initial drivers are correct is to revisit the design concepts that were made and ensure that they were the best decision for solving
 the problem at hand. This is where code reviews, and working in groups with other people comes in handy.
 
 ## Walk through your M2 test cases again, but this time with your Detailed Design. How do the pieces of your Detailed Design work together to respond to the system’s inputs?
 
 One of the good things about developing the sequence diagrams that I did was that I have a good understanding of how the different pieces of the system work and
 interact with each other. I will analyze both the Rainy and Sunny day cases for these tests, and go over how different modules interact and respond to differing circumstances.
-The sunny day tests will look similar to the first sequence diagram in this milestone, while the rainy day tetss will look similar to the second.
+The sunny day tests will look similar to the first sequence diagram in this milestone, while the rainy day tests will look similar to the second.
 
 ### Sunny Day Tests
 
@@ -829,8 +829,12 @@ first action to kick off the sunny day workflow will be to launch the CM2W mobil
 in order to purchase a drink of their choosing. Then, the presentation layer will call down to the PointOfSalesApplication, which is standard, so there will be no deviation
 on iOS or Android devices. Our PointOfSales App will then call the machine that the user ordered the drink on, and the machine will then have the information
 needed in order to start making the drink of the user's choosing. Then the PointOfSales App will make a call to the REST API wrapper in order to store the data
-in the REST API and in the database. (The REST API wrapper is used because if we decide that we want to use another API in the future, we will be prepared and will
-only have to change our wrapper.) The REST API wrapper both stored needed data in both SQL and NoSQL datbases, therefor sort of acting like a data mapper. However, it
-also functions as an object view of the machine and the coffee, and allows cruicial information for CM2W to be stored, **without using application sttae.** The client
-then has the ability to check statuses of orders by making calls on the same application (with more priveleges). These calls will also go through the REST API wrapper
+in the REST API and in the database. (The REST API wrapper is used instead of just REST API because if we decide that we want to use another API in the future, we will be prepared and will
+only have to change our wrapper.) The REST API wrapper both stored needed data in both SQL and NoSQL databases, therefore sort of acting like a data mapper. However, it
+also functions as an object view of the machine and the coffee, and allows crucial information for CM2W to be stored, **without using application state.** The client
+then has the ability to check statuses of orders by making calls on the same application (with more privileges). These calls will also go through the REST API wrapper
 and access data in the SQL database and the NoSQL database.
+
+### Rainy Day Tests
+
+One of the reasons I believe my design does a good job is because I am able to properly handle cases where the system may encounter failures.
